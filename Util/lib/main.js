@@ -7,7 +7,7 @@ require.config({
         "base":"app/base",
         "Util":"util/Util",
         "baseDialog":"util/dialog/BaseDialog",
-        "grid":"util/grid/grid",
+        "grid":"util/grid/Grid",
         "tableDemo":"app/example/tableDemo",
         "treeDemo":"app/example/treeDemo",
         "treeDialogDemo":"app/example/treeDialogDemo"
