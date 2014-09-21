@@ -1,14 +1,11 @@
-/**
- * Created by YiYing on 2014/9/14.
- */
-define(["grid"],function(grid){
+define(["Util","jquery"],function(util,$){
+    
     var config = {
         id:"DemoOne",
-        placeAt:"DemoGirdDivId",            //存放Grid的容器ID
-        pageSize:5,                         //一页多少条数据
-        title:'<i class="fa fa-table" style="color:#2898e0"></i>&nbsp;人员信息列表',
-        hidden:false,                       //表格是否可隐藏，只显示标题
-        index:"checkbox",                   //首列为单选[radio]还是多选[checkbox],默认checkbox
+        placeAt:"DemoGirdDivId",                    //存放Grid的容器ID
+        pageSize:5,                                 //一页多少条数据
+        hidden:false,                               //表格是否可隐藏，只显示标题，默认false
+        index:"checkbox",                           //首列为单选[radio]还是多选[checkbox],默认checkbox
         layout:[
             {name:"姓名",field:"Name",sort:true,click:function(e){
                 console.log(e.data);
@@ -19,20 +16,6 @@ define(["grid"],function(grid){
             {name:"地址",field:"Address",format:function(obj){
                 //console.log(obj);
                 return "BJ"
-            }}
-        ],
-        toolbar:[
-            {name:"添加",class:"fa fa-plus-circle",callback:function(event){
-                console.log('添加')
-            }},
-            {name:"删除",class:"fa fa-trash-o",callback:function(event){
-                console.log('删除')
-            }},
-            {name:"查询",class:"fa fa-search",callback:function(event){
-                console.log(event.data)
-            }},
-            {name:"导出",class:"fa fa-download",callback:function(event){
-                console.log('导出')
             }}
         ],
         data:[
@@ -55,5 +38,18 @@ define(["grid"],function(grid){
         ]
         //data:{type:"URL",value:""}
     };
-    grid.init(config);
+
+    $("#gridDialogId").on("click",function(){
+        util.gridDialog({
+            title : "GridDialog",
+            setting : config,
+            callback : function(data){
+                var text = [];
+                for(var i=data.length;i--;){
+                    text.push("我是 "+data[i].name+"\n");
+                }
+                console.log(text.join(""));
+            }
+        });
+    });
 });

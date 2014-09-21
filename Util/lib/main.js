@@ -6,11 +6,9 @@ require.config({
         "json2":"modules/json2/json2",
         "base":"app/base",
         "Util":"util/Util",
+        "demo":"app/example",
         "baseDialog":"util/dialog/BaseDialog",
-        "grid":"util/grid/Grid",
-        "tableDemo":"app/example/tableDemo",
-        "treeDemo":"app/example/treeDemo",
-        "treeDialogDemo":"app/example/treeDialogDemo"
+        "grid":"util/grid/Grid"
     },
     shim:{
         "bootstrap":["jquery"],
@@ -23,28 +21,38 @@ require.config({
             'text':'modules/requirejs/plugin/text'
         }
     }
-
 });
 
  require(["jquery","bootstrap"],function(){
     require(["base"],function(){
-        console.log("table loaded");
+        console.log("base loaded");
     });
     //初始化table
-    require(["tableDemo"],function(){
+    require(["demo/tableDemo"],function(){
         console.log("table loaded");
     });
     //初始化zTree
-    require(["treeDemo"],function(){
+    require(["demo/treeDemo"],function(){
         console.log("zTree loaded");
     });
-    require(["treeDialogDemo"],function(){
+    
+    require(["demo/treeDialogDemo"],function(){
         console.log("treeDialogDemo loaded");
     });
+
+    require(["demo/gridDialogDemo"],function(){
+        console.log("gridDialogDemo loaded");
+    });
     
-    //util.treeDialog({id:"TreeDialogId"},null,null,function(data){
-    //    alert(data.name);
-    //})
+    require(["demo/typeaheadDemo"],function(){
+        console.log("typeaheadDemo loaded");
+    });
+    
+    require(["demo/treeAndGridDialogDemo"],function(){
+        console.log("treeAndGridDialogDemo loaded");
+    });
+    
+
      //未登录或session过期时ajax处理
      /*$(document)
      .ajaxSuccess(function(event,request,settings){

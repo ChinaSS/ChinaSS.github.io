@@ -67,7 +67,7 @@
          * @param nodeObj
          */
         util.zTree = function(element, setting, nodeObj){
-            require(["zTree","css!modules/zTree/css/zTreeStyle/zTreeStyle.css"],function(){
+            require(["util/ztree/ztree"],function(){
                 $.fn.zTree.init(element, setting, nodeObj);
             });
         };
@@ -81,69 +81,115 @@
                 baseDialog(config);
             });
         };
-        /**
-        config = {
-            data:{},//json对象数据或者是url地址
-            type:false,//表示data数据的类型,false为JSON对象,true为url地址
-            selectMuti:false,//是否多选,默认为false
-            callback:function(data){},//回调函数,接收JSON类型数据
-        }
-        /* treeDialog */
-        util.treeDialog = function(Config){
-            var config = {
+        /***
+        * TreeDialog
+        * @param config
+        * config = {
+        *   id : id,                    //用于生成 zTree ID
+        *   isCache : true,             //是否缓存ztree数据,默认为true;不缓存则显示即时数据
+        *   data:{},                    //json对象数据(object)或者是url地址(string)
+        *   selectMuti:false,           //是否多选,默认为false
+        *   callback:function(data){}   //回调函数,接收JSON类型数据
+        * }
+        ***/
+        util.treeDialog = function(config){
+            config = $.extend({
+                treeId : "",
+                isCache : true,
                 data : null,
-                type : false,
                 selectMulti : false,
                 callback : null
-            };
-            $.extend(config,Config);
-            require(["baseDialog","zTree","css!modules/zTree/css/zTreeStyle/zTreeStyle.css"],function(baseDialog){
-                var $tree = $("<div id='dialog_zTree' class='ztree'></div>")
-                var setting={
-                        view: {
-                            selectedMulti: true,
-                            showLine:false,
-                            dblClickExpand:false
+            },config);
+            //zTree setting
+            config.setting={
+                    view: {
+                        selectedMulti: config.selectMulti,
+                        showLine:false,
+                        dblClickExpand:false
+                    },
+                    data: {
+                        key: {
+                            title:"t"
                         },
-                        data: {
-                            key: {
-                                title:"t"
-                            },
-                            simpleData: {
-                                enable : true
-                            }
+                        simpleData: {
+                            enable : true
                         }
-                    },nodeObj=null;
-                if (!config.selectMulti) {
-                    setting.view.selectedMulti=false;
-                };
-                if (!config.type) {
-                    nodeObj=config.data;
-                }else{
-                    //$.ajax, nodeObj=?
+                    }
+            };
+            //data为url时,设置ztree异步读取数据
+            if (typeof config.data === "string") {
+                config.setting.async={
+                    enable : true,
+                    url : config.data
                 }
-                $.fn.zTree.init($tree,setting,nodeObj);
-                var dialog = baseDialog({id:"system_dialog_treeDialog",modal:{show:true},dialogSize:"modal-sm"});
-                dialog.on('shown.bs.modal', function (e) {
-                    dialog.setBody($tree);
-                    dialog.setFoot([
-                        {
-                            name:"保存",
-                            callback:function(){
-                                var treeObj = $.fn.zTree.getZTreeObj("dialog_zTree");
-                                var data=null;
-                                if (treeObj!=undefined) {
-                                    data = treeObj.getSelectedNodes();
-                                };
-                                dialog.modal("hide");
-                                config.callback(data);
-                            }
-                        }
-                    ],true);
-                })
+                config.data=null;
+                config.isCache=false;//异步读取数据时,不缓存ztree
+            }
+            require(["util/dialog/TreeDialog"],function(treeDialog){
+                treeDialog.init(config);
             });
         };
-        
+        /***
+        *   input自动补全
+        *   @param config
+        *   config = {
+        *       id : null,          //页面锚id
+        *       text : null,        //按钮文字
+                data : null,        //JSON对象或数据URL地址
+        *       callback : null,    //绑定功能函数
+        *       lazyMatch : true,   //延迟匹配,优化查询开销,默认为true
+        *   }
+        ***/
+        util.typeahead = function(config){
+            require(["util/typeahead/typeahead","css!util/typeahead/typeahead.css"],function(typeahead){
+                typeahead.init(config);
+            });
+        };
+
+        /***
+        *   GridDialog
+        *   @param config
+        *   config = {
+        *       id : null,          //页面锚id
+        *       text : null,        //按钮文字
+                data : null,        //JSON对象或数据URL地址
+        *       callback : null,    //绑定功能函数
+        *       lazyMatch : true,   //延迟匹配,优化查询开销,默认为true
+        *   }
+        ***/
+        util.gridDialog = function(config){
+            require(["util/dialog/GridDialog"],function(gridDialog){
+                gridDialog.init(config);
+            });
+        };
+        util.treeAndGridDialog = function(config){
+            config.tree.setting={
+                    view: {
+                        selectedMulti: false,
+                        showLine:false,
+                        dblClickExpand:false
+                    },
+                    data: {
+                        key: {
+                            title:"t"
+                        },
+                        simpleData: {
+                            enable : true
+                        }
+                    }
+            };
+            if (typeof config.tree.data === "string") {
+                config.tree.setting.async={
+                    enable : true,
+                    url : config.data
+                }
+                config.tree.data=null;
+                config.tree.isCache=false;//异步读取数据时,不缓存ztree
+            }
+            require(["util/dialog/TreeAndGridDialog"],function(treeAndGridDialog){
+                treeAndGridDialog.init(config);
+            });
+        }
         /**
          * tab页签
          * @param config

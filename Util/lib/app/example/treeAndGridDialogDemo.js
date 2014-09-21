@@ -1,14 +1,10 @@
-/**
- * Created by YiYing on 2014/9/14.
- */
-define(["grid"],function(grid){
-    var config = {
+define(["Util","jquery"],function(util,$){
+    var grid = {
         id:"DemoOne",
-        placeAt:"DemoGirdDivId",            //存放Grid的容器ID
-        pageSize:5,                         //一页多少条数据
-        title:'<i class="fa fa-table" style="color:#2898e0"></i>&nbsp;人员信息列表',
-        hidden:false,                       //表格是否可隐藏，只显示标题
-        index:"checkbox",                   //首列为单选[radio]还是多选[checkbox],默认checkbox
+        placeAt:"DemoGirdDivId",                    //存放Grid的容器ID
+        pageSize:5,                                 //一页多少条数据
+        hidden:false,                               //表格是否可隐藏，只显示标题，默认false
+        index:"checkbox",                           //首列为单选[radio]还是多选[checkbox],默认checkbox
         layout:[
             {name:"姓名",field:"Name",sort:true,click:function(e){
                 console.log(e.data);
@@ -19,20 +15,6 @@ define(["grid"],function(grid){
             {name:"地址",field:"Address",format:function(obj){
                 //console.log(obj);
                 return "BJ"
-            }}
-        ],
-        toolbar:[
-            {name:"添加",class:"fa fa-plus-circle",callback:function(event){
-                console.log('添加')
-            }},
-            {name:"删除",class:"fa fa-trash-o",callback:function(event){
-                console.log('删除')
-            }},
-            {name:"查询",class:"fa fa-search",callback:function(event){
-                console.log(event.data)
-            }},
-            {name:"导出",class:"fa fa-download",callback:function(event){
-                console.log('导出')
             }}
         ],
         data:[
@@ -53,7 +35,37 @@ define(["grid"],function(grid){
             {Name:"张三15",Sex:"男",Phone:"123456",Email:"zhangsan@gmail.com",Address:"CQ"},
             {Name:"张三16",Sex:"男",Phone:"123456",Email:"zhangsan@gmail.com",Address:"BJ"}
         ]
-        //data:{type:"URL",value:""}
     };
-    grid.init(config);
+    
+    var nodeObj=[
+        {id:1,pId:0,name:"父节点1",t:"我有子节点",open:true},
+        {id:11,pId:1,name:"子节点11",t:"我的父节点是1"},
+        {id:12,pId:1,name:"子节点12",t:"我的父节点是1"},
+        {id:13,pId:1,name:"子节点13",t:"我的父节点是1"},
+        {id:2,pId:0,name:"父节点2",t:"我有子节点"},
+        {id:21,pId:2,name:"子节点21",t:"我的父节点是2"},
+        {id:22,pId:2,name:"子节点22",t:"我的父节点是2"},
+        {id:23,pId:2,name:"子节点23",t:"我的父节点是2"},
+        {id:3,pId:0,name:"父节点2",t:"我没有子节点",isParent:true},
+    ];
+
+    var tree = {
+        isCache : true,             //是否缓存ztree数据,默认为true;不缓存则显示即时数据
+        data: nodeObj
+    };
+
+    $("#treeAndGridDialogId").on("click",function(){
+        util.treeAndGridDialog({
+            title : "TreeAndGridDialog",
+            grid : grid,
+            tree : tree,
+            callback : function(data){
+                var text = [];
+                for(var i=data.length;i--;){
+                    text.push("我是 "+data[i].name+"\n");
+                }
+                console.log(text.join(""));
+            }
+        });
+    });
 });

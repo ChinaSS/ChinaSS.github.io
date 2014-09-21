@@ -52,7 +52,8 @@
         dialogHTML.push('</div>');
         var height = config.height?"min-height:"+config.height:"";
         dialogHTML.push('<div class="modal-body" style="'+height+'"></div>');
-        dialogHTML.push('<div class="modal-footer"></div>');
+        var footStyle = 'style="border-bottom-right-radius:6px;border-bottom-left-radius:6px;padding:10px 20px 10px;background-color:#eff3f8;"';
+        dialogHTML.push('<div class="modal-footer" '+footStyle+'></div>');
         dialogHTML.push('</div></div></div>');
         var $root   = $(dialogHTML.join(""));
 
@@ -95,36 +96,36 @@
          * 取得body
          * @returns {*}
          */
-        cache[config.id].getBody = function(){
+        dialog.getBody = function(){
             return $body;
         };
         /**
          * 设置body
          * @param body
          */
-        cache[config.id].setBody = function(body){
+        dialog.setBody = function(body){
             $body.empty().append(body);
         };
         /**
          * 取得foot
          * @returns {*}
          */
-        cache[config.id].getFoot = function(){
+        dialog.getFoot = function(){
             return $root.find("div[class='modal-footer']");
         };
         /**
          * foot操作栏
          * @type {setFoot}
          */
-        cache[config.id].setFoot = setFoot;
+        dialog.setFoot = setFoot;
         /**
          * 设置title
          * @param title
          */
-        cache[config.id].setTitle = function(title){
+        dialog.setTitle = function(title){
             $root.find("h4[class='modal-title']").empty().append(title);
         };
-        return cache[config.id];
+        return dialog;
     };
 });
 //@ sourceURL=BaseDialog.js
