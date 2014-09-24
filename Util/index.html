@@ -2,9 +2,10 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>公共组件样例</title>
+    <title>常用组件样例</title>
     <link rel="stylesheet" href="lib/modules/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/docs.min.css" />
+    <link rel="stylesheet" href="lib/util/css/Util.css" />
 </head>
 <body>
     <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
@@ -16,32 +17,41 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../" class="navbar-brand">UI组件库</a>
+                <a href="#" class="navbar-brand">首页</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="../getting-started/"></a>
+                        <a href="#">常用组件</a>
+                    </li>
+                    <li>
+                        <a href="">常用样式</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://expo.bootcss.com"></a></li>
-                    <li><a href="http://blog.getbootstrap.com"></a></li>
+                    <li><a href="https://github.com/ChinaSS/Util" target="_blank">GitHub</a></li>
+                    <li><a href="https://github.com/ChinaSS/Util/wiki" target="_blank">Wiki</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="bs-docs-header" id="content">
         <div class="container">
-            <h1>公共组件样例</h1>
+            <h1>常用组件样例</h1>
         </div>
     </div>
     <div class="container bs-docs-container">
         <div class="row">
             <div class="col-md-9" role="main">
-                
                 <div class="bs-docs-section">
-                    <h1 id="tabDemo" class="page-header">tab页签</h1>
+                    <h1 id="SidebarDemo" class="page-header">侧边栏</h1>
+                    <p>侧边栏样例，该组件适用于窗口右侧弹出侧边栏编辑数据</p>
+                    <div class="bs-example">
+                        <button type="button" class="btn btn-primary" id="sidebarButtonID">侧边栏</button>
+                    </div>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="tabDemo" class="page-header">Tab页签</h1>
                     <p>tab页签样例,请参考Bootstrap官方<a href="http://v3.bootcss.com/javascript/#tabs" target="_blank">样例</a></p>
                     <div class="bs-example" style="height:160px">
                         <!-- Nav tabs -->
@@ -79,31 +89,31 @@
                     </div>
                 </div>
                 <div class="bs-docs-section">
-                    <h1 id="baseDialogDemo" class="page-header">模态窗口</h1>
+                    <h1 id="baseDialogDemo" class="page-header">BaseDialog</h1>
                     <p>弹出模态框样例</p>
                     <div class="bs-example">
                         <button type="button" class="btn btn-primary" onclick="require(['demo/dialogDemo'],function(demo){demo.createDialog()})">BaseDialog</button>
                     </div>
                 </div>
                 <div class="bs-docs-section">
-                    <h1 id="alertDemo" class="page-header">alert</h1>
-                    <p>alert弹出框</p>
+                    <h1 id="alertDemo" class="page-header">Alert</h1>
+                    <p>Alert弹出框</p>
                     <div class="bs-example">
-                        <button type="button" class="btn btn-primary" onclick="require(['Util'],function(u){u.alert('alert弹出框！')})">alert</button>
+                        <button type="button" class="btn btn-primary" onclick="require(['Util'],function(u){u.alert('alert弹出框！')})">Alert</button>
                     </div>
                 </div>
                 <div class="bs-docs-section">
-                    <h1 id="confirmDemo" class="page-header">comfirm</h1>
-                    <p>confirm弹出框</p>
+                    <h1 id="confirmDemo" class="page-header">Comfirm</h1>
+                    <p>Confirm弹出框</p>
                     <div class="bs-example">
-                        <button type="button" class="btn btn-primary" onclick="require(['Util'],function(u){u.confirm('confirm弹出框！')})">confirm</button>
+                        <button type="button" class="btn btn-primary" onclick="require(['Util'],function(u){u.confirm('confirm弹出框！')})">Confirm</button>
                     </div>
                 </div>
                 <div class="bs-docs-section">
                     <h1 id="TreeDialogDemo" class="page-header">TreeDialog</h1>
                     <p>TreeDialog样例</p>
                     <div class="bs-example">
-                        <button type="button" class="btn btn-primary" id="treeDialogId">treeDialog</button>
+                        <button type="button" class="btn btn-primary" id="treeDialogId">TreeDialog</button>
                     </div>
                     
                 </div>
@@ -111,7 +121,14 @@
                     <h1 id="GridDialogDemo" class="page-header">GridDialog</h1>
                     <p>GridDialog样例</p>
                     <div class="bs-example">
-                        <button type="button" class="btn btn-primary" id="gridDialogId">gridDialog</button>
+                        <button type="button" class="btn btn-primary" id="gridDialogId">GridDialog</button>
+                    </div>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="TreeAndGridDialogDemo" class="page-header">TreeAndGridDialogDemo</h1>
+                    <p>TreeAndGridDialogDemo样例</p>
+                    <div class="bs-example">
+                        <button type="button" class="btn btn-primary" id="treeAndGridDialogId">TreeAndGridDialogDemo</button>
                     </div>
                 </div>
                 <div class="bs-docs-section">
@@ -121,20 +138,17 @@
                         <input type="text" id="TypeaheadId">
                     </div>
                 </div>
-                <div class="bs-docs-section">
-                    <h1 id="TreeAndGridDialogDemo" class="page-header">treeAndGridDialogDemo</h1>
-                    <p>TreeAndGridDialogDemo样例</p>
-                    <div class="bs-example">
-                        <button type="button" class="btn btn-primary" id="treeAndGridDialogId">treeAndGridDialogDemo</button>
-                    </div>
-                </div>
+
             </div>
 
             <div class="col-md-3">
                 <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary" id="affix">
                     <ul class="nav bs-docs-sidenav">
-                        <li class="active">
-                            <a href="#tabDemo">tab页签</a>
+                        <li class="">
+                            <a href="#SidebarDemo">侧边栏</a>
+                        </li>
+                        <li>
+                            <a href="#tabDemo">Tab页签</a>
                         </li>
                         <li class="">
                             <a href="#gridDemo">Grid</a>
@@ -143,13 +157,13 @@
                             <a href="#treeDemo">Tree</a>
                         </li>
                         <li class="">
-                            <a href="#baseDialogDemo">模态框</a>
+                            <a href="#baseDialogDemo">BaseDialog</a>
                         </li>
                         <li class="">
-                            <a href="#alertDemo">alert弹出框</a>
+                            <a href="#alertDemo">Alert弹出框</a>
                         </li>
                         <li class="">
-                            <a href="#confirmDemo">confirm弹出框</a>
+                            <a href="#confirmDemo">Confirm弹出框</a>
                         </li>
                         <li class="">
                             <a href="#TreeDialogDemo">TreeDialog</a>
@@ -158,10 +172,10 @@
                             <a href="#GridDialogDemo">GridDialog</a>
                         </li>
                         <li class="">
-                            <a href="#TypeaheadDemo">Typeahead</a>
+                            <a href="#TreeAndGridDialogDemo">TreeAndGridDialog</a>
                         </li>
                         <li class="">
-                            <a href="#TreeAndGridDialogDemo">TreeAndGridDialog</a>
+                            <a href="#TypeaheadDemo">Typeahead</a>
                         </li>
                     </ul>
                     <a class="back-to-top" href="#top">
