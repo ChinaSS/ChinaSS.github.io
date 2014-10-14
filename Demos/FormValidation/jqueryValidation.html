@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="lib/modules/bootstrap/css/bootstrap.css"/>
+    <style>
+        /*boostrap样式覆盖*/
+        label{
+            font-weight:normal !important
+        }
+        .form-group {
+            margin-bottom: 8px !important;
+        }
+        .col-md-8{
+            padding-left: 0px !important;
+        }
+        .col-sm-10{
+            padding-left: 0px !important;
+        }
+        .form-control{
+            height: 30px;
+            padding: 3px 10px;
+            font-size:13px;
+        }
+        .help-block{
+            margin-bottom:0;
+        }
+    </style>
+</head>
+<body>
+<form id="contentForm" style="margin-top:20px;margin-left: 100px;margin-right: 100px">
+    <div class="row" style="text-align:center">
+        <h2>JQuery Validation样例</h2>
+    </div>
+    <div class="row" >
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo6" class="col-md-4 col-sm-2 control-label">出生日期:</label>
+                <div class="col-md-8 col-sm-10 select">
+                    <input id="attistInfo6" type="text" class="form-control form-date" name="attistInfo6">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo7" class="col-md-4 col-sm-2 control-label">生卒日期:</label>
+                <div class="col-md-8 col-sm-10 select">
+                    <input id="attistInfo7" type="text" class="form-control form-date">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" >
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo88" class="col-md-4 col-sm-2 control-label">身高:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo88" type="text" class="form-control" name="attistInfo88" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo99" class="col-md-4 col-sm-2 control-label">体重:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo99" type="text" class="form-control" name="attistInfo99">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" >
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="" class="col-md-4 col-sm-2 control-label">生肖:</label>
+                <div class="col-md-8 col-sm-10">
+                    <select class="form-control">
+                        <option></option>
+                        <option>虎</option>
+                        <option>龙</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="" class="col-md-4 col-sm-2 control-label">血型:</label>
+                <div class="col-md-8 col-sm-10">
+                    <select class="form-control">
+                        <option></option>
+                        <option>A型</option>
+                        <option>B型</option>
+                        <option>O型</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="" class="col-md-4 col-sm-2 control-label">星座:</label>
+                <div class="col-md-8 col-sm-10">
+                    <select class="form-control">
+                        <option></option>
+                        <option>白羊座</option>
+                        <option>巨蟹座</option>
+                        <option>双鱼座</option>
+                        <option>水瓶座</option>
+                        <option>处女座</option>
+                        <option>天蝎座</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo9" class="col-md-4 col-sm-2 control-label">QQ:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo9" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo10" class="col-md-4 col-sm-2 control-label">会员证号:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo10" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo11" class="col-md-4 col-sm-2 control-label">入会时间:</label>
+                <div class="col-md-8 col-sm-10 select">
+                    <input id="attistInfo11" type="text" class="form-control form-date">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo12" class="col-md-4 col-sm-2 control-label">曾居住地:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo12" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo13" class="col-md-4 col-sm-2 control-label">现居住地:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo13" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo14" class="col-md-2 col-sm-2 control-label">家庭地址:</label>
+                <div class="col-md-10 col-sm-10">
+                    <input id="attistInfo14" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo15" class="col-md-2 col-sm-2 control-label">办公地址:</label>
+                <div class="col-md-10 col-sm-10">
+                    <input id="attistInfo15" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo16" class="col-md-4 col-sm-2 control-label">家庭邮编:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo16" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo17" class="col-md-4 col-sm-2 control-label">办公邮编:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo17" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo18" class="col-md-4 col-sm-2 control-label">办公电话:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo18" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo19" class="col-md-4 col-sm-2 control-label">住宅电话:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo19" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo20" class="col-md-4 col-sm-2 control-label">手机号码:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo20" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo21" class="col-md-4 col-sm-2 control-label">传真号码:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo21" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo24" class="col-md-4 col-sm-2 control-label">邮箱:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo24" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo25" class="col-md-4 col-sm-2 control-label">标签:</label>
+                <div class="col-md-8 col-sm-10">
+                    <input id="attistInfo25" type="text" class="form-control" >
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 form-horizontal">
+            <div class="form-group">
+                <label for="attistInfo26" class="col-sm-2 control-label">简介:</label>
+                <div class="col-sm-10">
+                    <textarea id="attistInfo26" class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="text-align:center">
+        <input class="btn btn-primary" type="submit" value="Submit">
+        <button class="btn btn-danger" onclick="vali()">验证</button>
+    </div>
+</form>
+
+    <script type="text/javascript" src="lib/modules/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/modules/jquery/plugins/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="lib/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/app/jqueryVali.js"></script>
+</body>
+</html>
