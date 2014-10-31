@@ -1,0 +1,97 @@
+<div class="row">
+    <div class="col-md-3" style="">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">信访指南</h3>
+            </div>
+            <div class="panel-body">
+                1. 信访人提交信访事项，应当注明姓名、地址、电子信箱、联系电话及请求事项、事实和理由。<br>
+                2. 信访人提出的信访事项，应当遵守法律法规，不得捏造、歪曲事实，不得诬告、陷害他人，不得损害国家、集体和其他公民的合法权益。<br>
+                3. 一般信访事项应当在30日内回复。情况复杂的，可再延长30日回复。<br>
+                4. 信访人通过网上信访系统提交的信访事项除揭发控告、检举等要保密的内容外，其他信访结果查询请通过网上信访系统查询。<br>
+                <hr>
+                <span style="color:red">注意事项</span><br>
+                1.带‘*’号的栏目必须填写，请信访公众如实填写；(请牢记提交时弹出框里的信访件号和查询方式)<br>
+                2. 附件上载最大为4M。
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">信访信息填写</h3>
+            </div>
+            <div class="panel-body">
+                <div>
+                    注意：标有 * 的必须填写
+                </div>
+                <hr>
+                <form style="padding-left: 5px">
+                    <div class="row">
+                        <div class="col-md-12 form-horizontal">
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label"><span style="color:red">*</span>关键词:</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" style="width:25%">
+                                        <option></option>
+                                        <option>劳动社保</option>
+                                        <option>教育</option>
+                                        <option>综合</option>
+                                        <option>其它</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 form-horizontal">
+                            <div class="form-group">
+                                <label for="" class="col-sm-2 control-label"><span style="color:red">*</span>受理单位:</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" style="width:25%">
+                                        <option></option>
+                                        <option>省有关单位</option>
+                                        <option>市有关单位</option>
+                                        <option>县区信访局</option>
+                                        <option>市信访局</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 form-horizontal">
+                            <div class="form-group">
+                                <label for="theme" class="col-sm-2 control-label"><span style="color:red">*</span>主题:</label>
+                                <div class="col-sm-10">
+                                    <input id="theme" name="resourcesType" type="text" class="form-control" ng-model="system.resource.entity.resourcesType">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 form-horizontal">
+                            <div class="form-group">
+                                <label for="attistInfo26" class="col-sm-2 control-label"><span style="color:red">*</span>内容:</label>
+                                <div class="col-sm-10">
+                                    <textarea id="attistInfo26" class="form-control" rows="13"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 form-horizontal">
+                            <div class="form-group">
+                                <label for="yanzm" class="col-sm-2 control-label"><span style="color:red">*</span>验证码:</label>
+                                <div class="col-sm-10">
+                                    <input id="yanzm" type="text" class="form-control" style="width:25%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 form-horizontal" style="text-align: center">
+                            <button class="btn btn-primary">提交</button>
+                            <button class="btn btn-primary">重置</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
