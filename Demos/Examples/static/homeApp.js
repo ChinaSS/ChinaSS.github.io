@@ -20,7 +20,7 @@ define(["app/directive","core/directive","app/routerMap","Angular","Angular-rout
             return {
                 replace: false,
                 restrict: 'A',
-                templateUrl: getStaticPath() +'/core/home/views/sidebarLI.html',
+                templateUrl: getStaticPath() +'core/home/views/sidebarLI.html',
                 link: function ($scope, element, attrs) {
                     $http.get(getServer() +'/static/core/home/menu/data/Menu.json').success(function (data) {
                         $scope.hover = "";
