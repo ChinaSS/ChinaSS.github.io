@@ -1,0 +1,10 @@
+[
+    { "code": "CD001", "pCode":"root", "name": "资料采集"},
+    { "code": "CD00101", "pCode":"CD001", "name": "艺术家信息"},
+    { "code": "CD00102", "pCode":"CD001", "name": "作品信息"},
+    { "code": "CD00103", "pCode":"CD001", "name": "活动信息"},
+    { "code": "CD00104", "pCode":"CD001", "name": "奖项信息"},
+    { "code": "CD002", "pCode":"root", "name": "配置管理"},
+    { "code": "CD00201", "pCode":"CD002", "name": "字典管理"},
+    { "code": "CD00202", "pCode":"CD002", "name": "资源管理"}
+]

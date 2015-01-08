@@ -1,0 +1,56 @@
+<div class="slidebar-detail" id="txtInfoEditPanel" style="display:none;">
+
+	<div style="float:left">
+        <div style="padding:10px;font-size:24px"><i class="menu-icon fa fa-file-audio-o" >&nbsp;</i>文本-{{txtInfo.entity.titleName}}</div>
+    </div>
+    <div style="float:right;padding-top:23px;padding-right:15px">
+		<button type="button" class="btn btn-default" ng-click="txtInfo.saveEntity()"><i class="menu-icon fa fa-save"></i>&nbsp;保存</button>
+	</div>
+	<div style="float:right;padding-top:23px;padding-right:15px">
+		<button type="button" class="btn btn-default closeBtn" ><i class="menu-icon fa fa-close"></i>&nbsp;关闭</button>
+	</div>
+    
+    <ul class="nav nav-tabs" role="tablist" style="clear:both;">
+    	<li class="active"><a data-target="#pictureBaseInfo" role="tab" data-toggle="tab">文本信息</a></li>
+    </ul>
+    
+    <div class="tab-content">
+    	<div class="tab-pane active" id="txtBaseInfo">
+    		<form id="txtBaseInfoForm">
+    			<div class="row">
+    				<div class="col-xs-10 form-horizontal">
+    					<div class="row">
+    						<div class="form-group">
+    							<label for="titleName" class="col-xs-4 control-label"><span style="color:red;">*</span>文本标题:</label>
+    							<div class="col-xs-8">
+    								<input id="titleName" name="titleName" type="text" class="form-control" ng-model="txtInfo.entity.titleName">
+    							</div>
+    						</div>
+    						<div class="form-group">
+    							<label for="dictBizType" class="col-xs-4 control-label"><span style="color:red;">*</span>业务类型:</label>
+    							<div class="col-xs-8">
+    								<input id="dictBizType" name="dictBizType" type="text" class="form-control" cs-input="txtInfo.csInputConfig" ng-model="txtInfo.entity.dictBizType">
+    							</div>
+    						</div>
+    						<div class="form-group" id="uploader">
+    							<label for="picView" class="col-xs-4 control-label">选择文本:</label>
+    							<div class="col-xs-4">
+    								<input type="text" class="form-control" ng-model="upload.data[upload.data.length-1].fileName">
+    							</div>
+    							<div class="col-xs-4">
+    								<div style="float:right;">
+    									<button id="picker" class="btn btn-default" style="background-color:#1E90FF;"><i class="menu-icon fa fa-paperclip"></i>&nbsp;选择</button>
+    									<button id="ctlBtn" class="btn btn-default"><i class="menu-icon fa fa-upload"></i>&nbsp;上传</button>
+    								</div>	
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</form>
+    	</div>
+    </div>
+    
+    
+    
+</div>

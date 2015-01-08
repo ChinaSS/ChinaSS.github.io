@@ -1,0 +1,73 @@
+<form id="educationFormId">
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="dictStudyCountry" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>就读国家:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="dictStudyCountry" name="dictStudyCountry" cs-input="inputStudyCountryCodes.initConfig" type="text" class="form-control" ng-model="artistInfo.tempEducation.dictStudyCountry">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="college" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>就读学校:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="college" name="college" type="text" class="form-control" ng-model="artistInfo.tempEducation.college">
+                      </div>
+                  </div>
+              </div>
+		</div>
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="dictDiscipline" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>学习专业:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="dictDiscipline" name="dictDiscipline" type="text" class="form-control" ng-model="artistInfo.tempEducation.dictDiscipline">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="dictEduBg" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>学历:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="dictEduBg" name="dictEduBg" type="text" class="form-control" cs-input="inputEducation.initConfig" ng-model="artistInfo.tempEducation.dictEduBg">
+                      </div>
+                  </div>
+              </div>
+		</div>
+         <div class="row">
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label  class="col-md-4 col-sm-2 control-label">起始时间:</label>
+                            <div class="col-md-8 col-sm-10 app-date">
+                                 <input id="beginYear" name="beginYear" type="text" class="form-control app-year"  ng-model="artistInfo.tempEducation.beginYear">年
+                                 <input id="beginMonth" name="beginMonth" type="text" class="form-control app-month"  ng-model="artistInfo.tempEducation.beginMonth">月
+                                 <input id="beginDay" name="beginDay" type="text" class="form-control app-day"  ng-model="artistInfo.tempEducation.beginDay">日
+                            </div>
+                </div>
+            </div>
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="dictDegree" class="col-md-4 col-sm-2 control-label">获得学位:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="dictDegree" name="dictDegree" type="text" class="form-control" cs-input="inputDegree.initConfig" ng-model="artistInfo.tempEducation.dictDegree">
+                    </div>
+                </div>
+            </div>
+       </div>
+       
+        <div class="row">
+             <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-2 control-label">结束时间:</label>
+                       <div class="col-md-8 col-sm-10 app-date">
+                             <input id="endYear" name="endYear" type="text" class="form-control app-year"  ng-model="artistInfo.tempEducation.endYear">年
+                             <input id="endMonth" name="endMonth" type="text" class="form-control app-month"  ng-model="artistInfo.tempEducation.endMonth">月
+                             <input id="endDay" name="endDay" type="text" class="form-control app-day"  ng-model="artistInfo.tempEducation.endDay">日
+                      </div>
+                </div>
+            </div>
+ 	    </div>
+             
+</form>
+	    

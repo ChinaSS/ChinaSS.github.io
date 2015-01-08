@@ -1,0 +1,27 @@
+<div id="artistChoosePanel" style="display: none;">
+	<div>
+        <div style="padding:5px 5px 5px;font-size:24px"><i class="fa fa-home"></i>&nbsp;艺术家选择</div>
+    </div>
+   	<hr/>
+   	<div class="col-xs-12 form-horizontal">
+		<div class="form-group">
+			<label for="" class="col-xs-3 control-label">艺术家名称:</label>
+			<div class="col-xs-8">
+				<input id="chooseArtistName" type="text" class="form-control" ng-model="artist.artistName"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-xs-1 col-xs-offset-3">
+				<input type="button" value="查询" class="btn btn-default btn-xs "  ng-click=""/>
+			</div>
+			<div class="col-xs-1 col-xs-offset-1">
+				<input type="button" value="选择" class="btn btn-default btn-xs "  ng-click="opus.artist.onChoose()"/>
+			</div>		
+		</div>
+   	</div>
+   	<div class="clearfix"></div>
+	<hr/>
+	<div class="col-xs-12">
+		<div id="chooseArtistListId"></div>
+	</div>
+</div>

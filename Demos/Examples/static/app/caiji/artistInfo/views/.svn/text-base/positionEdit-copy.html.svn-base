@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>文艺机构信息资源发布应用系统</title>
+
+	</head>
+
+	<body class="no-skin"  ng-controller="BodyCtrl">
+		            <table class="table table-bordered table-hover" style="margin-top:10px">
+	                <tr>
+	                    <td style="width:15%">所属机构</td>
+	                    <td style="width:35%">
+	                    	<input id="orgCode" name="orgCode" type="text" class="form-control"  ng-model="artistInfo.entity.joinShipYear">
+	                    </td>
+                    </tr>
+                    <tr>
+	                    <td style="width:15%">职务名称</td>
+	                    <td style="width:35%">
+	                    	<input id="positionName" name="positionName" type="text" class="form-control" cs-input="input.initConfig" ng-model="artistInfo.entity.positionName">
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>备注</td>
+	                    <td>
+	                      <textarea id="remarks" name="remarks" class="form-control" rows="3" ng-model="artistInfo.entity.introduction"></textarea>
+                        </td>
+	                </tr>
+	            </table>
+	
+	</body>
+</html>

@@ -1,0 +1,115 @@
+<div id="awardInfoEditPanel" style="display:none">
+    <form id="awardInfoFormId">
+    <div style="float:left">
+        <div style="padding:10px;font-size:24px"><i class="fa fa-home"></i>&nbsp;{{awardInfo.entity.awardName}}</div>
+    </div>
+    <div style="float:right;padding-top:8px;padding-right:33px">
+        <button type="button" class="btn btn-default" style="width:98px;text-align:left" ng-click="awardInfo.saveEntity()">
+            <i class="fa fa-save"></i>&nbsp;保存
+        </button>
+    </div>
+
+
+    <div class="tab-pane active" style="margin-top:40px">
+        <div class="affix-section">
+            <h3 id="link1">获奖信息</h3>
+            <div class="row">
+
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="dictAwardCode" class="col-sm-3 control-label"><span style="color:red">*</span>奖项信息:</label>
+                        <div class="col-sm-8">
+                           <input  id="dictAwardCode" name="dictAwardCode" type="text" class="form-control" cs-input="inputAwards.initConfig" ng-model="awardInfo.entity.dictAwardCode" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="honoraryTitl" class="col-sm-3 control-label">奖项/称号:</label>
+                        <div class="col-sm-8">
+                            <input id="honoraryTitl" name="honoraryTitl" type="text" class="form-control" ng-model="awardInfo.entity.honoraryTitl">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="dictAwardType" class="col-sm-3 control-label"><span style="color:red">*</span>奖项类型:</label>
+                        <div class="col-sm-8">
+<!--                             <input id="dictAwardType" name="dictAwardType" type="text" class="form-control" ng-model="awardInfo.entity.dictAwardType"> -->
+                          <input id="awardType_artist" name="awardType" type="radio" value="1" checked ng-model="awardInfo.entity.dictAwardType" ng-click="dialogListSet.changeAwardType('1')">艺术家获奖
+                          <input id="awardType_opus"   name="awardType" type="radio" value="2" ng-model="awardInfo.entity.dictAwardType" ng-click="dialogListSet.changeAwardType('2')">作品获奖
+                          <input id="awardType_activity" name="awardType" type="radio" value="3" ng-model="awardInfo.entity.dictAwardType"  ng-click="dialogListSet.changeAwardType('3')">活动获奖
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal" id="artistDiv" >
+                    <div class="form-group">
+                        <label for="typeName_artist" class="col-sm-3 control-label"><span style="color:red">*</span>选择艺术家:</label>
+                        <div class="col-sm-8">
+                            <input id="typeName_artist" name="typeName" type="text" class="form-control" cs-dialog="dialogListSet.artistDialogConfig" ng-model="awardInfo.entity.typeName">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal" id="opusDiv" style="display:none">
+                    <div class="form-group">
+                        <label for="typeName_opus" class="col-sm-3 control-label"><span style="color:red">*</span>选择作品:</label>
+                        <div class="col-sm-8">
+                            <input id="typeName_opus" name="typeName" type="text" class="form-control" cs-dialog="dialogListSet.opusDialogConfig" ng-model="awardInfo.entity.typeName">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal" id="activityDiv" style="display:none">
+                    <div class="form-group">
+                        <label for="typeName_activity" class="col-sm-3 control-label"><span style="color:red">*</span>选择活动:</label>
+                        <div class="col-sm-8">
+                            <input id="typeName_activity" name="typeName" type="text" class="form-control" cs-dialog="dialogListSet.activityDialogConfig" ng-model="awardInfo.entity.typeName">
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="awardYear" class="col-sm-3 control-label">获奖年度:</label>
+                        <div class="col-sm-8">
+                            <input id="awardYear" name="awardYear" type="text" class="form-control" ng-model="awardInfo.entity.awardYear">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="timeNumber" class="col-sm-3 control-label">届次:</label>
+                        <div class="col-sm-8">
+                            <input id="timeNumber" name="timeNumber" type="text" class="form-control" ng-model="awardInfo.entity.timeNumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="sponsor" class="col-sm-3 control-label">主办单位:</label>
+                        <div class="col-sm-8">
+                            <input id="sponsor" name="sponsor" type="text" class="form-control" ng-model="awardInfo.entity.sponsor">
+                         </div>
+                    </div>
+                </div>
+               <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="awardAddress" class="col-sm-3 control-label">地点:</label>
+                        <div class="col-sm-8">
+                            <input id="awardAddress" name="awardAddress" type="text" class="form-control" ng-model="awardInfo.entity.awardAddress">
+                        </div>
+                    </div>
+                </div>
+               <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="remark" class="col-sm-3 control-label">备注:</label>
+                        <div class="col-sm-8">
+                            <input id="remark" name="remark" type="text" class="form-control" ng-model="awardInfo.entity.remark">
+                        </div>
+                    </div>
+                </div>
+                
+             
+               </div>
+        </div>
+    </div>
+    </form>
+</div>

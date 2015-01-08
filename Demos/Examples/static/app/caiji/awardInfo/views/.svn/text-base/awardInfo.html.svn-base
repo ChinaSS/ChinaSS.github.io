@@ -1,0 +1,10 @@
+
+<div>
+    <div id="awardInfoListId">
+    </div>
+</div>
+ <div>
+     <div ng-include src="awardInfo.template.editAwardInfo"></div>
+    <!--如果不包含这个模板,那右侧滑出页面无法出来 -->
+     <!--      此包含的页面为什么在列表页不显示,只在滑出时显示??-->
+</div>

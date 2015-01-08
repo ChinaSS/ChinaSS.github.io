@@ -1,0 +1,54 @@
+<form id="researchArtistRelFormId">
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="opusName" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>作品名称:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="opusName" name="opusName" type="text" class="form-control" cs-dialog="dialogResearchList.initConfig" ng-model="artistInfo.tempResearchArtistRel.opusName" >
+                      </div>
+                  </div>
+              </div>
+	          <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="dictOpusType" class="col-md-4 col-sm-2 control-label">资源类型:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="dictOpusType" name="dictOpusType" type="text" class="form-control" ng-model="artistInfo.tempResearchArtistRel.dictOpusType" readonly>
+                    </div>
+                </div>
+              </div>
+		</div>
+        <div class="row">
+               <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label  class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>创作时间:</label>
+                            <div class="col-md-8 col-sm-10 app-date">
+                                 <input id="creationYear" name="creationYear" type="text" class="form-control app-year"  ng-model="artistInfo.tempResearchArtistRel.creationYear" readonly >年
+                                 <input id="creationMonth" name="creationMonth" type="text" class="form-control app-month"  ng-model="artistInfo.tempResearchArtistRel.creationMonth" readonly>月
+                                 <input id="creationDay" name="creationDay" type="text" class="form-control app-day"  ng-model="artistInfo.tempResearchArtistRel.creationDay" readonly>日
+                            </div>
+                  </div>
+              </div>
+             <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label  class="col-md-4 col-sm-2 control-label">发表时间:</label>
+                       <div class="col-md-8 col-sm-10 app-date">
+                           <input id="issuanceYear" name="issuanceYear" type="text" class="form-control app-year"  ng-model="artistInfo.tempResearchArtistRel.issuanceYear" readonly>年
+                           <input id="issuanceMonth" name="issuanceMonth" type="text" class="form-control app-month"  ng-model="artistInfo.tempResearchArtistRel.issuanceMonth" readonly>月
+                           <input id="issuanceDay" name="issuanceDay" type="text" class="form-control app-day"  ng-model="artistInfo.tempResearchArtistRel.issuanceDay" readonly>日
+                      </div>
+                </div>
+            </div>
+	    </div>
+        <div class="row">
+             <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="opusIntroduction" class="col-md-4 col-sm-2 control-label">作品简介:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="opusIntroduction" name="opusIntroduction" type="text" class="form-control" ng-model="artistInfo.tempResearchArtistRel.opusIntroduction" readonly>
+                    </div>
+                </div>
+            </div>
+	    </div>
+             
+</form>
+	    

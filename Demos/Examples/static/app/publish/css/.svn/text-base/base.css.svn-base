@@ -1,0 +1,19 @@
+/* 最基础样式， 发布系统定制化CSS, 补充基于normalize的bootstrap样式 */
+
+ul{
+  margin: 0px;
+  padding: 0px;
+}
+
+/*.configArea {
+    border: 1px dotted #ccc;
+    height: 800px;
+    display: table;
+    position: relative;
+}
+
+.vert-hor-align {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}*/

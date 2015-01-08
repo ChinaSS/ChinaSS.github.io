@@ -1,0 +1,85 @@
+<div id="newsEditPanel" style="display:none">
+    <form id="newsFormId">
+    <div style="float:left">
+        <div style="padding:10px;font-size:24px"><i class="fa fa-home"></i>&nbsp;{{news.entity.newsTitle}}</div>
+    </div>
+    <div style="float:right;padding-top:8px;padding-right:33px">
+        <!--<button中的 ng-click属性值指定调用ctrl.js中的哪个方法  -->
+        <button type="button" class="btn btn-default" style="width:98px;text-align:left" ng-click="news.saveEntity()">
+            <i class="fa fa-save"></i>&nbsp;保存
+        </button>
+    </div>
+
+
+    <div class="tab-pane active" style="margin-top:40px">
+        <div class="affix-section">
+            <h3 id="link1">编辑新闻</h3>
+            <div class="row">
+
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="newsTitle" class="col-sm-3 control-label"><span style="color:red">*</span>新闻标题:</label>
+                        <div class="col-sm-8">
+                             <input id="newsTitle" name="newsTitle" type="text" class="form-control" ng-model="news.entity.newsTitle">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="dictArtType" class="col-sm-3 control-label">艺术类别:</label>
+                        <div class="col-md-8">
+	                         <select id="dictArtType"  name="dictArtType" ng-model="news.entity.dictArtType" class="form-control" ng-options="m.id as m.name for m in news.artTypeList">
+					               <option value="">-- 请选择 --</option>
+					         </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="templateId" class="col-sm-3 control-label"><span style="color:red">*</span>选择模板:</label>
+                        <div class="col-sm-8">
+                            <input id="templateId" name="templateId" type="text" class="form-control" ng-model="news.entity.templateId">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="dictNewsSort" class="col-sm-3 control-label">新闻类别:</label>
+                        <div class="col-md-8">
+	                         <select id="dictNewsSort"  name="dictNewsSort" ng-model="news.entity.dictNewsSort" class="form-control" ng-options="m.dictCode as m.dictName for m in news.newsSortCodes">
+					               <option value="">-- 请选择 --</option>
+					         </select>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="dictNewsType" class="col-sm-3 control-label"><span style="color:red">*</span>新闻类型:</label>
+                         <div class="col-md-8">
+	                         <select id="dictNewsType"  name="dictNewsType" ng-model="news.entity.dictNewsType" class="form-control" ng-options="m.dictCode as m.dictName for m in news.newsTypeCodes">
+					               <option value="">-- 请选择 --</option>
+					         </select>
+                         </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="relArtistIds" class="col-sm-3 control-label">参与嘉宾:</label>
+                        <div class="col-sm-8">
+                            <textarea id="relArtistIds" name="relArtistIds" class="form-control" ng-model="news.entity.relArtistIds"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="summary" class="col-sm-3 control-label">摘要:</label>
+                        <div class="col-sm-8">
+                            <input id="summary" name="summary" type="text" cs-dialog="artistGridDialog.initConfig" class="form-control" ng-model="news.entity.summary">
+                        </div>
+                    </div>
+                </div>
+               </div>
+        </div>
+    </div>
+    </form>
+</div>

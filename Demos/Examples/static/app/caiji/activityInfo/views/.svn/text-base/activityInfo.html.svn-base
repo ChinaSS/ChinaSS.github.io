@@ -1,0 +1,10 @@
+<div>
+    <div id="activityInfoList">
+    </div>
+</div>
+ <div>
+ 	<!--如果不包含这个模板,那右侧滑出页面无法出来 -->
+    <div ng-include src="activityInfo.template.editActivityInfo"></div>
+    
+
+</div>

@@ -1,0 +1,40 @@
+<form id="opusArtistRelFormId">
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="opusId" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>选择作品:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="opusId" name="opusId" type="text" class="form-control" ng-model="artistInfo.tempOpusArtistRel.opusName" ng-click="artistInfo.openOpusList()">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="joinDate" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>参与时间:</label>
+                     <div class="col-md-8 col-sm-10">
+                          <input id="joinDate" name="joinDate" type="text" class="form-control" cs-datetime="" ng-model="artistInfo.tempOpusArtistRel.joinDate">
+                      </div>
+                  </div>
+              </div>
+		</div>
+        <div class="row">
+             <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="dictProfession" class="col-md-4 col-sm-2 control-label">职务:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="dictProfession" name="dictProfession" type="text" class="form-control" cs-input="inputOpusPosition.initConfig" ng-model="artistInfo.tempOpusArtistRel.dictProfession">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="remark" class="col-md-4 col-sm-2 control-label">备注:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="remark" name="remark" type="text" class="form-control" ng-model="artistInfo.tempOpusArtistRel.remark">
+                    </div>
+                </div>
+            </div>
+	    </div>
+             
+</form>
+	    

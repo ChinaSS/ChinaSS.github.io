@@ -1,0 +1,54 @@
+<form id="workFormId">
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="workUnits" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>工作单位:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="workUnits" name="workUnits" type="text" class="form-control" ng-model="artistInfo.tempWork.workUnits">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="position" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>职位:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="position" name="position" type="text" class="form-control" ng-model="artistInfo.tempWork.position">
+                      </div>
+                  </div>
+              </div>
+		</div>
+         <div class="row">
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label  class="col-md-4 col-sm-2 control-label">起始时间:</label>
+                       <div class="col-md-8 col-sm-10 app-date">
+                             <input id="beginYear" name="beginYear" type="text" class="form-control app-year"  ng-model="artistInfo.tempWork.beginYear">年
+                             <input id="beginMonth" name="beginMonth" type="text" class="form-control app-month"  ng-model="artistInfo.tempWork.beginMonth">月
+                             <input id="beginDay" name="beginDay" type="text" class="form-control app-day"  ng-model="artistInfo.tempWork.beginDay">日
+                       </div>
+                </div>
+            </div>
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-2 control-label">结束时间:</label>
+                        <div class="col-md-8 col-sm-10 app-date">
+                            <input id="endYear" name="endYear" type="text" class="form-control app-year"  ng-model="artistInfo.tempWork.endYear">年
+                            <input id="endMonth" name="endMonth" type="text" class="form-control app-month"  ng-model="artistInfo.tempWork.endMonth">月
+                            <input id="endDay" name="endDay" type="text" class="form-control app-day"  ng-model="artistInfo.tempWork.endDay">日
+                       </div>
+                </div>
+            </div>
+       </div>
+        <div class="row">
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="performance" class="col-md-4 col-sm-2 control-label">工作成绩/成果/业绩:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="performance" name="performance" type="text" class="form-control" ng-model="artistInfo.tempWork.performance">
+                    </div>
+                </div>
+            </div>
+	    </div>
+             
+</form>
+	    

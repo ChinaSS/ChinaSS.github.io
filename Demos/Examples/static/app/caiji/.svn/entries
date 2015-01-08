@@ -1,0 +1,52 @@
+10
+
+dir
+769
+http://219.239.110.37/repos/wyjg/wyjg/src/main/webapp/static/app/caiji
+http://219.239.110.37/repos/wyjg
+
+
+
+2014-12-23T08:11:27.503975Z
+769
+gaodsh
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5669708a-7f70-44a7-b83c-43df02a0bd09
+
+activityInfo
+dir
+
+artistInfo
+dir
+
+awardInfo
+dir
+
+opus
+dir
+
+picInfo
+dir
+
+txtInfo
+dir
+
+videoInfo
+dir
+
+voiceInfo
+dir
+

@@ -1,0 +1,34 @@
+<div class="col-xs-12" id="queryConditions" style="display:none;">
+	<div class="control-group form-horizontal">
+		<label class="col-xs-1 control-label" for="queryTitle">图片名称:</label>
+		<div class="col-xs-2">
+			<input type="text" class="form-control" id="queryTitle" ng-model="picInfo.query.dto.titleName">
+		</div>
+		<!--  LJ需要图片大小查询条件
+		<label class="col-xs-1 control-label" for="querySize">图片大小:</label>
+		<div class="col-xs-2">
+			<input type="text" class="form-control" id="querySize" ng-model="picInfo.query.dto.picSize">
+		</div>
+		-->
+		<label class="col-xs-1 control-label" for="queryType">业务类型:</label>
+		<div class="col-xs-2">
+			<input id="queryType" name="queryType" type="text" class="form-control" cs-input="picInfo.query.csInputConfig" ng-model="picInfo.query.dto.dictBizType">
+		</div>
+		<div class="col-xs-3">
+			<div style="float:left">
+				<button class="btn btn-default" ng-click="picInfo.query.query()">查询</button>
+				<button class="btn btn-default" ng-click="picInfo.query.reset()">重置</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col-xs-12">
+	<div id="pictureInfoList"></div>
+</div>
+<div>
+	<div ng-include src="picInfo.template.editPicInfo"></div>
+</div>
+<div>
+	<div ng-include src="picInfo.template.upload"></div>
+</div>

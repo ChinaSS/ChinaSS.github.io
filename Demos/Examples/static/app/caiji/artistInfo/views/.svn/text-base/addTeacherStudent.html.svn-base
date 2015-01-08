@@ -1,0 +1,43 @@
+<form id="teacherStudentFormId">
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="teacherOrStudent" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>选择业务类型:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="teacherOrStudent_teacher" name="teacherOrStudent" type="radio" checked ng-click="dialogArtistList.addTeacherOrStudent('addTeacher')">添加老师
+                          <input id="teacherOrStudent_student" name="teacherOrStudent" type="radio"         ng-click="dialogArtistList.addTeacherOrStudent('addStudent')">添加学生
+                      </div>
+                  </div>
+              </div>
+		</div>
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="teacherName" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>老师:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="teacherName" name="teacherName" type="text" class="form-control" cs-dialog="dialogArtistList.initConfig"  ng-model="artistInfo.tempTeacherStudent.teacherName">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="studentName" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>学生:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="studentName" name="studentName" type="text" class="form-control"  cs-dialog="dialogArtistList.initConfig" disabled ng-model="artistInfo.tempTeacherStudent.studentName">
+                      </div>
+                  </div>
+              </div>
+		</div>
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="artTypeCodes" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>师承:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="artTypeCodes" name="artTypeCodes" type="text" class="form-control" cs-input="inputArtType.initConfig" ng-model="artistInfo.tempTeacherStudent.artTypeCodes">
+                      </div>
+                  </div>
+              </div>
+		</div>
+             
+</form>
+	    

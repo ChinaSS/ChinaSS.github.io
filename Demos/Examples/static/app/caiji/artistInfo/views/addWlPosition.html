@@ -1,0 +1,75 @@
+<!-- 该form用于校验输入 -->
+<form id="WlPositionInfoFormId">
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="orgCode" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>所属机构:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="orgCode" name="orgCode" type="text" class="form-control" ng-model="artistInfo.tempPosition.orgCode">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="wlpositionName" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>职务名称:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="wlpositionName" name="positionName" type="text" class="form-control" cs-input="inputWlPosition.initConfig" ng-model="artistInfo.tempPosition.positionName">
+                      </div>
+                  </div>
+              </div>
+		</div>
+        <div class="row">
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label  class="col-md-4 col-sm-2 control-label">起始时间:</label>
+                       <div class="col-md-8 col-sm-10 app-date">
+                              <input id="beginYear" name="beginYear" type="text" class="form-control app-year"  ng-model="artistInfo.tempPosition.beginYear">年
+                              <input id="beginMonth" name="beginMonth" type="text" class="form-control app-month"  ng-model="artistInfo.tempPosition.beginMonth">月
+                              <input id="beginDay" name="beginDay" type="text" class="form-control app-day"  ng-model="artistInfo.tempPosition.beginDay">日
+                       </div>
+                </div>
+            </div>
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-2 control-label">结束时间:</label>
+                    <div class="col-md-8 col-sm-10 app-date">
+                           <input id="endYear" name="endYear" type="text" class="form-control app-year"  ng-model="artistInfo.tempPosition.endYear">年
+                           <input id="endMonth" name="endMonth" type="text" class="form-control app-month"  ng-model="artistInfo.tempPosition.endMonth">月
+                           <input id="endDay" name="endDay" type="text" class="form-control app-day"  ng-model="artistInfo.tempPosition.endDay">日
+                    </div>
+                </div>
+            </div>
+       </div>
+		
+       <div class="row">
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="sectorTimes" class="col-md-4 col-sm-2 control-label">届次:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="sectorTimes" name="sectorTimes" type="text" class="form-control" ng-model="artistInfo.tempPosition.sectorTimes">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                     <label for="isPost" class="col-md-4 col-sm-2 control-label">现任职务:</label>
+                     <div class="col-md-8 col-sm-10">
+                        <input id="isPost" name="isPost" type="text" class="form-control" ng-model="artistInfo.tempPosition.isPost">
+                     </div>
+                 </div>
+            </div>
+       </div>
+       
+        <div class="row">
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="remarks" class="col-md-4 col-sm-2 control-label">备注:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="remarks" name="remarks" type="text" class="form-control" ng-model="artistInfo.tempPosition.remarks">
+                    </div>
+                </div>
+            </div>
+	    </div>
+             
+</form>
+	    

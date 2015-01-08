@@ -1,0 +1,257 @@
+<div class="sidebar_detail" id="ActivityInfoEditPanel" style="display:none">
+     <div style="float:left">
+        <div style="padding:10px;font-size:24px"><i class="menu-icon fa fa-th-large" >&nbsp;</i>活动-{{activityInfo.entity.actName}}</div>
+    </div>
+
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" style="clear:both">
+        <!-- tab使用: -->
+        <li class="active"><a data-target="#ActivityBaseInfo" role="tab" data-toggle="tab">基本信息</a></li>
+        <li><a data-target="#ActivityArtistRel" role="tab" data-toggle="tab">主要嘉宾</a></li>
+        <li><a data-target="#ActivityOpusRel" role="tab" data-toggle="tab">关联作品</a></li>
+        <li><a data-target="#ActivityFileRel" role="tab" data-toggle="tab" ng-click="upload.init()">资料上传</a></li>
+    </ul>
+
+    <!-- Tab panels -->
+    <div class="tab-content">
+    
+        <div class="tab-pane active" id="ActivityBaseInfo">
+          <form id="activityInfoForm">
+            <div class="row">
+                <div class="col-md-10 form-horizontal">
+                    <div class="row">
+                        <div class="col-md-12 form-horizontal">
+                            <div class="form-group">
+                                <label for="actName" class="col-sm-2 control-label"><span style="color:red">*</span>活动名称:</label>
+                                <div class="col-sm-10">
+                                    <input id="actName" name="actName" type="text" class="form-control" ng-model="activityInfo.entity.actName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 form-horizontal">
+                            <div class="form-group">
+                                <label for="actAddress" class="col-sm-2 control-label">活动地址:</label>
+                                <div class="col-sm-10">
+                                	<input id="actAddress" name="actAddress" class="form-control" type="text" cs-input="activityInfo.csInputConfig" ng-model="activityInfo.entity.actAddress">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="dictActType" class="col-md-4 control-label">活动类别:</label>
+                                <div class="col-md-8">
+                                    <select id="dictActType" name="dictActType" class="form-control" ng-model="activityInfo.entity.dictActType" ng-options="m.dictCode as m.dictName for m in activityInfo.dictActTypeCodes">
+                                    	<option value="">--请选择 --</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="activityArtType" class="col-md-4 control-label">艺术类别:</label>
+                                <div class="col-md-8">
+                                    <input id="activityArtType" name="activityArtType" class="form-control" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="timeNumber" class="col-md-4 control-label">届次:</label>
+                                <div class="col-md-8">
+			                            <input id="timeNumber" name="timeNumber" type="text" class="form-control" ng-model="activityInfo.entity.timeNumber">
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="auditFlag" class="col-md-4 control-label">标签:</label>
+                                <div class="col-md-8">
+			                            <input id="auditFlag" name="auditFlag" type="text" class="form-control" ng-model="activityInfo.entity.auditFlag">
+                                 </div>
+                            </div>
+                        </div>
+                    </div>    
+   				 <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="beginDate" class="col-md-4 control-label">开始日期:</label>
+                        <div class="col-md-8">
+                        <div class="row">
+                        <div class="col-sm-3" style="padding-right:0px;">
+                        	<input id="beginYear" name="beginYear" type="text" class="form-control" ng-model="activityInfo.entity.beginYear" style="padding-right:5px;padding-left:5px;">
+                        </div>
+                        <label for="beginYear" class="col-sm-1 control-label" style="padding-left:3px;padding-right:3px;">年</label>
+                        <div class="col-sm-3" style="padding-right:0px;padding-left:3px;">
+                        	<input id="beginMonth" name="beginMonth" type="text" class="form-control" ng-model="activityInfo.entity.beginMonth" style="padding-right:5px;padding-left:5px;">
+                        </div>
+                        <label for="beginMonth" class="col-sm-1 control-label" style="padding-left:3px;padding-right:3px;">月</label>
+                        <div class="col-sm-3" style="padding-right:0px;padding-left:3px;">
+                        	<input id="beginDay" name="beginDay" type="text" class="form-control" ng-model="activityInfo.entity.beginDay" style="padding-right:5px;padding-left:5px;">
+                        </div>
+                        <label for="beginDay" class="col-sm-1 control-label" style="padding-left:3px;padding-right:3px;">日</label>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="endDate" class="col-md-4 control-label">结束日期:</label>
+                        <div class="col-md-8">
+                        <div class="row">
+                        <div class="col-sm-3" style="padding-right:0px;">
+                        	<input id="endYear" name="endYear" type="text" class="form-control" ng-model="activityInfo.entity.endYear" style="padding-right:5px;padding-left:5px;">
+                        </div>
+                        <label for="endYear" class="col-sm-1 control-label" style="padding-left:3px;padding-right:3px;">年</label>
+                        <div class="col-sm-3" style="padding-right:0px;padding-left:3px;">
+                        	<input id="endMonth" name="endMonth" type="text" class="form-control" ng-model="activityInfo.entity.endMonth" style="padding-right:5px;padding-left:5px;">
+                        </div>
+                        <label for="endMonth" class="col-sm-1 control-label" style="padding-left:3px;padding-right:3px;">月</label>
+                        <div class="col-sm-3" style="padding-right:0px;padding-left:3px;">
+                        	<input id="endDay" name="endDay" type="text" class="form-control" ng-model="activityInfo.entity.endDay" style="padding-right:5px;padding-left:5px;">
+                        </div>
+                        <label for="endDay" class="col-sm-1 control-label" style="padding-left:3px;padding-right:3px;">日</label>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="actContent" class="col-sm-2 control-label">活动内容:</label>
+                        <div class="col-sm-10">
+                            <textarea id="actContent" name="actContent" class="form-control" rows="3" ng-model="activityInfo.entity.actContent"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+			    <div style="float:right;padding-top:23px;padding-right:15px">
+			        <button type="button" class="btn btn-default" ng-click="activityInfo.saveEntity()"><i class="menu-icon fa fa-save"></i>&nbsp;保存</button>
+			    </div>
+			    <div style="float:right;padding-top:23px;padding-right:15px">
+			        <button type="button" class="btn btn-default closeBtn" ><i class="menu-icon fa fa-close"></i>&nbsp;关闭</button>
+			    </div>
+				</div>
+            </div>
+           </form>
+    	</div>
+    	
+        <div class="tab-pane" id="ActivityArtistRel">
+        	<div class="affix-section">
+        		<h3 id="link0">
+                     <span>参与活动艺术家</span>
+                     <span>
+                           <a id="activityArtistAdd" style="float:right;font-size:14px" ng-click="activityInfo.addArtist()">
+                           <i class="fa fa-plus-circle" >&nbsp;</i>添加</a>
+                     </span>
+                </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                	<tr>
+	                    <td style="width:50px">序号</td>
+	                    <td>艺术家姓名</td>
+	                    <td>年龄</td>
+	                    <td>性别</td>
+	                    <td style="width:50px">操作</td>
+	                </tr>
+	                <tr ng-repeat="artist in activityInfo.actArtistList">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{artist.artistName}}</td>
+	                    <td>{{artist.artistAge}}</td>
+	                    <td>{{artist.sex}}</td>
+	                    <td style="text-align:center;font-size:14px">
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="activityInfo.delArtist($index)"></i>
+	                    </td>
+	                </tr>
+                </table>
+                
+        	</div>
+   		</div>
+	
+		<div class="tab-pane" id="ActivityOpusRel">
+			<div class="affix-section">
+				<h3 id="link0">
+                     <span>关联作品信息</span>
+                     <span>
+                           <a id="activityOpusAdd" style="float:right;font-size:14px" ng-click="activityInfo.addOpus()">
+                           <i class="fa fa-plus-circle" >&nbsp;</i>添加</a>
+                     </span>
+                </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                	<tr>
+	                    <td style="width:50px">序号</td>
+	                    <td>作品名称</td>
+	                    <td>主题</td>
+	                    <td>出处</td>
+	                    <td>创作年份</td>
+	                    <td>发表年份</td>
+	                    <td style="width:50px">操作</td>
+	                </tr>
+	                <tr ng-repeat="opus in activityInfo.actOpusList">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{opus.opusName}}</td>
+	                    <td>{{opus.topic}}</td>
+	                    <td>{{opus.masterParticipants}}</td>
+	                    <td>{{opus.creationYear}}</td>
+	                    <td>{{opus.issuanceYear}}</td>
+	                    <td style="text-align:center;font-size:14px">
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="activityInfo.delOpus($index)"></i>
+	                    </td>
+	                </tr>
+                </table>
+			</div>
+		</div>
+		
+		<div class="tab-pane" id="ActivityFileRel">
+			<div class="affix-section">
+				<h3 id="link0">
+                     <span>资料上传</span>
+                </h3>
+                <div class="col-xs-12">
+                	<div id="uploader" class="css-uploader">
+                		<div class="col-xs-12">
+				    		<div class="col-xs-7"></div>
+				    		<div class="col-xs-5">
+					        	<div id="picker" class="btn_upload">选择文件</div>
+					        	<button id="ctlBtn" class="btn btn-default">开始上传</button>
+				        	</div>
+				    	</div>
+                	</div>
+                </div>
+                <div class="clearfix"></div>
+				       <div style="margin-top: 2px;">
+				    	<table id="theList" class="table table-bordered">
+							<tr>
+								<td>文件名</td>
+								<td>状态</td>
+								<td>进度</td>
+								<td>操作</td>
+							</tr>
+		                	<tr ng-repeat="of in upload.data">
+			                    <td ng-bind="of.fileName"></td>
+			                    <td>{{of.state}}</td>
+			                    <td><div class="progress-striped active" ng-class="{progress : of.pbar}"><div class="progress-bar" role="progressbar" ng-style="{width:of.width}"></div></div></td>
+		                    	<td>
+		                    		<i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="upload.del($index)"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+		                    		<i class="glyphicon glyphicon-download" style="cursor:pointer" title="下载" ng-click="upload.download(of.fileId)" ng-show="of.fileAliases != '' "></i>
+		                    	</td>
+		                	</tr>							
+						</table>
+					</div>
+			</div>
+		</div>
+	
+	</div>
+	
+	<div>
+ 	<!--如果不包含这个模板,那右侧滑出页面无法出来 
+ 		艺术家列表-->
+    <div ng-include src="activityInfo.template.relArtist"></div>
+
+	</div>
+	
+	<div>
+ 	<!--如果不包含这个模板,那右侧滑出页面无法出来 
+ 		作品列表-->
+    <div ng-include src="activityInfo.template.relOpus"></div>
+
+	</div>
+</div>

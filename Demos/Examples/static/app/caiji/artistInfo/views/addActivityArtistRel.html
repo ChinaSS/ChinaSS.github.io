@@ -1,0 +1,41 @@
+<form id="activityArtistRelFormId">
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="activityName" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>活动名称:</label>
+                      <div class="col-md-8 col-sm-10">
+<!--                           <input id="activityId" name="activityId" type="text" class="form-control"  ng-model="artistInfo.tempActivityArtistRel.id.activityId"> -->
+                          <input id="activityName" name="activityName" type="text" class="form-control" cs-dialog="dialogActivityList.initConfig" ng-model="artistInfo.tempActivityArtistRel.activityName">
+<!--                           <input id="activityId" name="activityId" type="text" class="form-control" cs-dialog="dialogActivityList.initConfig" ng-model="dialogActivityList.value"> -->
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="joinDate" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>参与时间:</label>
+                     <div class="col-md-8 col-sm-10">
+                          <input id="joinDate" name="joinDate" type="text" class="form-control" cs-datetime="" ng-model="artistInfo.tempActivityArtistRel.joinDate">
+                      </div>
+                  </div>
+              </div>
+		</div>
+        <div class="row">
+             <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="dictProfession" class="col-md-4 col-sm-2 control-label">届次:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="dictProfession" name="dictProfession" type="text" class="form-control" ng-model="artistInfo.tempActivityArtistRel.dictProfession" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="introduction" class="col-md-4 col-sm-2 control-label">简介:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="introduction" name="introduction" type="text" class="form-control" ng-model="artistInfo.tempActivityArtistRel.introduction">
+                    </div>
+                </div>
+            </div>
+	    </div>
+</form>
+	    

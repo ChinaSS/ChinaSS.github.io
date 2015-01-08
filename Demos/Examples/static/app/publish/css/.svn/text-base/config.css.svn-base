@@ -1,0 +1,166 @@
+/* 除核心编辑区域外其他配置CSS */
+#topBar{
+    font-family : '微软雅黑'	;
+}
+
+#topBar{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(64, 64, 64);
+    color: #fff;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+
+#topBar > div{
+    margin: 0px 3px;
+}
+
+#topBar .topBarLogo {
+    height: 26px;
+    float: left;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+#topBar .topBarLogo .logo{
+    height:  100%;
+}
+
+#topBar .topBarMode {
+    height: 100%;
+    float: left;
+}
+
+#topBar .topBarMode .desktop{
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-position: 0px -3px;
+    background-image: url('../images/desktop.png');
+    float: left;
+}
+
+#topBar .topBarMode .mobile{
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-position: 0px -3px;
+    background-image: url('../images/mobile.png');
+    float: left;
+}
+
+#topBar .topBarInfo{
+    height: 100%;
+    float: right; 	
+}
+
+#topBar .topBarRight{
+    height: 100%;
+    float: right;
+}
+
+#topBar .rightSection{
+    list-style: none;
+}
+
+#topBar .rightSection li{
+    float: right;
+    padding: 0px 10px;
+    margin: 5px 0px;
+    cursor: pointer;
+    border-right: 1px solid #615D5D;
+}
+
+#topBar .rightSection li:hover{
+    color: #00a2d4;
+}
+
+#topBar .page{
+	display: inline-block;
+	cursor: pointer;
+	width: 90px;
+	height: 30px;
+	float: left;
+	padding: 4px 0px 0px 4px;
+	margin: 0px 0px 0px 5px;
+}
+
+#topBar .topBarPreview{
+	float: right;
+}
+
+#topBar .toggle-slider{
+	color: #B5B5B5;
+	cursor: pointer;
+	font-size: 10px;
+	font-weight: 100;
+	letter-spacing: 3px;
+	color: #aaa;
+	display: inline-block;
+	vertical-align: top;
+	height: 30px;
+}
+
+.toggle-slider .on{
+	color: #fff;
+}
+
+.toggle-slider .preview, .toggle-slider .edit{
+	display: inline-block;
+}
+
+.slider-wrapper{
+	cursor: pointer;
+	position: relative;
+	width: 36px;
+	height: 14px;
+	margin: 9px 10px -3px 10px;
+	display: inline-block;
+}
+
+.toggle-slider .slider-wrapper > div{
+	position: absolute;
+	background-color: #7cc0d5;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 1px solid #232120;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.4);
+	width: 36px;
+	height: 12px;
+}
+
+.toggle-slider .slider-wrapper .c-slider{
+	width: 12px;
+	height: 12px;
+	background-color: #454342;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 1px solid #1d1c1b;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+#topBar .btn-xsm{
+    padding: 0px 5px;
+    font-size: 12px;
+    line-height: 1.4;
+    border-radius: 3px;
+}
+
+#topBar .dropdown-menu{
+    min-width: 132px;   
+    margin: 0px;
+    font-size: 12px;
+}
+
+#topBar .dropdown-menu > li > a{
+    padding: 0px 6px;   
+}

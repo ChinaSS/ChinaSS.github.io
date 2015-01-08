@@ -1,0 +1,28 @@
+<div id="relOpus" style="display:none;" class="sidebar_detail">
+	<div style="float:left">
+        <div style="padding:10px;font-size:24px"><i class="menu-icon fa fa-paint-brush" >&nbsp;</i>作品列表</div>
+    </div>
+    <div class="clearfix"></div>
+    <hr/>
+    <div class="row">
+    	<div class="col-md-10 form-horizontal">
+    		<div class="col-md-12 form-horizontal">
+    			<div class="form-group">
+    				<label for="opusNameForSearch" class="col-sm-4 control-label"></span>作品名称:</label>
+                    <div class="col-sm-7">
+                       <input id="opusNameForSearch" name="opusNameForSearch" type="text" class="form-control" ng-model="activityInfo.opusNameForSearch">
+                    </div>
+                    <label class="control-label" ><a><i class="fa fa-search"></i></a></label>
+                    
+    			</div>
+    		</div>
+    	</div>
+    	<div class="col-sm-12">
+    		<div id="relOpusListForChoose"></div>
+    	</div>
+    </div>
+    
+    <div style="float:right;padding-top:36px;padding-right:15px">
+			<button type="button" class="btn-link" ng-click="activityInfo.closeOpusHtml()"><i class="menu-icon fa fa-close"></i>&nbsp;关闭</button>
+	</div>
+</div>

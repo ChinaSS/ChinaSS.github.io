@@ -1,0 +1,752 @@
+<script type="text/javascript">
+</script>
+<div class="sidebar_detail" id="EditArtistInfoPanel" style="display:none">
+     <div style="float:left">
+        <div style="padding:10px;font-size:24px"><i class="menu-icon fa fa-user">&nbsp;</i>{{artistInfo.entity.artistName}}</div>
+    </div>
+    <div style="float:right;padding-top:23px;padding-right:33px">
+        <!-- 保存艺术家基本信息的按钮 -->
+        <button type="button" class="btn btn-default" ng-click="artistInfo.saveEntity()"><i class="menu-icon fa fa-save"></i>&nbsp;保存</button>
+    </div>
+
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" style="clear:both">
+        <!-- tab使用: -->
+        <li class="active"><a data-target="#PersonBaseInfo" role="tab" data-toggle="tab">基本信息</a></li>
+        <li ><a data-target="#ZWeiOrZWu" role="tab" data-toggle="tab">职位/职务</a></li>
+        <li><a data-target="#PersonResume" role="tab" data-toggle="tab">个人履历</a></li>
+        <li><a data-target="#zpxx" role="tab" data-toggle="tab">作品信息</a></li>
+        <li><a data-target="#cyhd" role="tab" data-toggle="tab">参与活动</a></li>
+        <li><a data-target="#hjxx" role="tab" data-toggle="tab">获奖信息</a></li>
+        <li><a data-target="#xwzx" role="tab" data-toggle="tab">新闻资讯</a></li>
+        <li><a data-target="#yjpl" role="tab" data-toggle="tab">研究评论</a></li>
+        <li><a data-target="#ysxx" role="tab" data-toggle="tab">艺术信息</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="PersonBaseInfo">
+          <form id="artistInfoFormId">
+            <div class="row">
+                <div class="col-md-2 form-horizontal">
+                    <div align="center">
+<!--                         <img src="images/user.jpg" style="width:150px;height:165px;margin-top:12px"> -->
+                    </div>
+                </div>
+                <div class="col-md-10 form-horizontal">
+                    <div class="row">
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="artistName" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>姓名:</label>
+                                <div class="col-md-8 col-sm-10">
+                                    <input id="artistName" name="artistName" type="text" class="form-control" ng-model="artistInfo.entity.artistName">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="artistAliases" class="col-md-4 col-sm-2 control-label">笔名/艺名:</label>
+                                <div class="col-md-8 col-sm-10">
+                                    <input id="artistAliases" name="artistAliases" type="text" class="form-control" ng-model="artistInfo.entity.artistAliases">
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="dictSex" class="col-md-4 col-sm-2 control-label">性别:</label>
+                                <div class="col-md-8 col-sm-10">
+			                            <select id="dictSex"  name="dictSex" ng-model="artistInfo.entity.dictSex" class="form-control" ng-options="m.dictCode as m.dictName for m in artistInfo.sexCodes">
+										    <option value="">-- 请选择 --</option>
+										</select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="dictNationId" class="col-md-4 col-sm-2 control-label">民族:</label>
+                                <div class="col-md-8 col-sm-10">
+			                            <select id="dictNationId"  name="dictNationId" ng-model="artistInfo.entity.dictNationId" class="form-control" ng-options="m.dictCode as m.dictName for m in artistInfo.nationCodes">
+										    <option value="">-- 请选择 --</option>
+										</select>
+                                 </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="dictHometown" class="col-md-4 col-sm-2 control-label">籍贯:</label>
+                                <div class="col-md-8 col-sm-10">
+                         			 <input id="dictHometown"  name="dictHometown" type="text" class="form-control" cs-typeahead="typeaheadDictHometown.initConfig" ng-model="artistInfo.entity.dictHometown">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="dictPoliticalStatus" class="col-md-4 col-sm-2 control-label">政治面貌:</label>
+                                <div class="col-md-8 col-sm-10">
+			                            <select id="dictPoliticalStatus"  name="dictPoliticalStatus" ng-model="artistInfo.entity.dictPoliticalStatus" class="form-control" ng-options="m.dictCode as m.dictName for m in artistInfo.politicalCodes">
+										    <option value="">-- 请选择 --</option>
+										</select>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="dictNationality" class="col-md-4 col-sm-2 control-label">国籍:</label>
+                                <div class="col-md-8 col-sm-10">
+                                       <input id="dictNationality" name="dictNationality" type="text" class="form-control" cs-input="inputNationalityCodes.initConfig" ng-model="artistInfo.entity.dictNationality">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-horizontal">
+                            <div class="form-group">
+                                <label for="dictPlaceBirth" class="col-md-4 col-sm-2 control-label">出生地:</label>
+                                <div class="col-md-8 col-sm-10">
+                                    <input id="dictPlaceBirth" name="dictPlaceBirth" type="text"  class="form-control" cs-typeahead="typeaheadDictHometown.initConfig" ng-model="artistInfo.entity.dictPlaceBirth">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+		   				 <div class="col-md-6 form-horizontal">
+		                    <div class="form-group">
+		                        <label  class="col-md-4 col-sm-2 control-label">出生日期:</label>
+		                        <div class="col-md-8 col-sm-10 app-date">
+                                    <input id="birthdayYear" name="birthdayYear" type="text" class="form-control app-year"  ng-model="artistInfo.entity.birthdayYear">年
+                                    <input id="birthdayMonth" name="birthdayMonth" type="text" class="form-control app-month"  ng-model="artistInfo.entity.birthdayMonth">月
+                                    <input id="birthdayDay" name="birthdayDay" type="text" class="form-control app-day"  ng-model="artistInfo.entity.birthdayDay">日
+                                </div>
+		                    </div>
+		                </div>
+		                <div class="col-md-6 form-horizontal">
+		                    <div class="form-group app-date">
+		                        <label  class="col-md-4 col-sm-2 control-label">生卒日期:</label>
+		                        <div class="col-md-8 col-sm-10 app-date">
+ 		                            <input id="deadYear" name="deadYear" type="text" class="form-control app-year"  ng-model="artistInfo.entity.deadYear">年
+		                            <input id="deadMonth" name="deadMonth" type="text" class="form-control app-month"  ng-model="artistInfo.entity.deadMonth">月
+		                            <input id="deadDay" name="deadDay" type="text" class="form-control app-day"  ng-model="artistInfo.entity.deadDay">日
+                                </div>
+		                    </div>
+		                </div>
+                   </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="tencentQq" class="col-md-4 col-sm-2 control-label">QQ:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="tencentQq" name="tencentQq" type="text" class="form-control" ng-model="artistInfo.entity.tencentQq">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="manberShipCard" class="col-md-4 col-sm-2 control-label">会员证号:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="manberShipCard" name="manberShipCard" type="text" class="form-control" ng-model="artistInfo.entity.manberShipCard">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label  class="col-md-4 col-sm-2 control-label">入会时间:</label>
+                        <div class="col-md-8 col-sm-10 app-date">
+	                        <input id="joinShipYear" name="joinShipYear" type="text" class="form-control app-year"  ng-model="artistInfo.entity.joinShipYear">年
+	                        <input id="joinShipMonth" name="joinShipMonth" type="text" class="form-control app-month"  ng-model="artistInfo.entity.joinShipMonth">月
+	                        <input id="joinShipDay" name="joinShipDay" type="text" class="form-control app-day"  ng-model="artistInfo.entity.joinShipDay">日
+	                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="dictAddress" class="col-md-4 col-sm-2 control-label">现居住地:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="dictAddress" name="dictAddress" type="text" class="form-control" cs-typeahead="typeaheadDictHometown.initConfig" ng-model="artistInfo.entity.dictAddress">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="familyAddress" class="col-md-2 col-sm-2 control-label">家庭地址:</label>
+                        <div class="col-md-10 col-sm-10">
+                            <input id="familyAddress" name="familyAddress" type="text" class="form-control" ng-model="artistInfo.entity.familyAddress">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="workAddress" class="col-md-2 col-sm-2 control-label">办公地址:</label>
+                        <div class="col-md-10 col-sm-10">
+                            <input id="workAddress" name="workAddress" type="text" class="form-control" ng-model="artistInfo.entity.workAddress">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="familyZip" class="col-md-4 col-sm-2 control-label">家庭邮编:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="familyZip" name="familyZip" type="text" class="form-control" ng-model="artistInfo.entity.familyZip">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="workZip" class="col-md-4 col-sm-2 control-label">办公邮编:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="workZip" name="workZip" type="text" class="form-control" ng-model="artistInfo.entity.workZip">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="workPhone" class="col-md-4 col-sm-2 control-label">办公电话:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="workPhone" name="workPhone" type="text" class="form-control" ng-model="artistInfo.entity.workPhone">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="familyPhone" class="col-md-4 col-sm-2 control-label">住宅电话:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="familyPhone" name="familyPhone" type="text" class="form-control" ng-model="artistInfo.entity.familyPhone">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="tellIphone" class="col-md-4 col-sm-2 control-label">手机号码:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="tellIphone" name="tellIphone" type="text" class="form-control" ng-model="artistInfo.entity.tellIphone">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="faxNum" class="col-md-4 col-sm-2 control-label">传真号码:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="faxNum" name="faxNum" type="text" class="form-control" ng-model="artistInfo.entity.faxNum">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="blog" class="col-md-4 col-sm-2 control-label">博客:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="blog" name="blog" type="text" class="form-control" ng-model="artistInfo.entity.blog">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="microblog" class="col-md-4 col-sm-2 control-label">微博:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="microblog" name="microblog" type="text" class="form-control" ng-model="artistInfo.entity.microblog">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 form-horizontal">
+                    <div class="form-group">
+                        <label for="email" class="col-md-4 col-sm-2 control-label">邮箱:</label>
+                        <div class="col-md-8 col-sm-10">
+                            <input id="email" name="email" type="text" class="form-control" ng-model="artistInfo.entity.email">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                        <label for="introduction" class="col-sm-2 control-label">简介:</label>
+                        <div class="col-sm-10">
+                            <textarea id="introduction" name="introduction" class="form-control" rows="3" ng-model="artistInfo.entity.introduction"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+           </form>
+        </div>
+        
+        <!--职位职务tab页开始 -->
+        <div class="tab-pane" id="ZWeiOrZWu">
+              <!--行政职务开始 -->
+            <div class="affix-section">
+                <h3 id="link0">
+                     <span>行政职务</span>
+                     <span>
+                           <a id="xzPositionAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addPosition()">
+                           <i class="fa fa-plus-circle" >&nbsp;</i>添加</a>
+                     </span>
+                </h3>
+				<!-- 不使用grid了,使用ng-repeat 做列表 -->
+	            <table class="table table-bordered table-hover" style="margin-top:10px">
+                <!--隐藏输入框用来接受新增页面传过来的值 -->
+	             
+	                <tr>
+	                    <td style="width:50px">序号</td>
+	                    <td>所属机构</td>
+	                    <td>职务名称</td>
+	                    <td>备注</td>
+	                    <td style="width:51px">操作</td>
+	                </tr>
+	                <tr ng-repeat="position in artistInfo.positions | filter:{dictPostType:'1'}" ng-if="1==1">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ position.orgCode }}</td>
+	                    <td>{{ position.positionNameShow }}</td>
+	                    <td>{{ position.remarks }}</td>
+	                    <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editPosition(position)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delPosition(position)"></i>
+	                    </td>
+	                </tr>
+	            </table>
+            </div>
+
+            <!--文联职务 -->
+            <div class="affix-section">
+                <h3 id="link2">
+                <span>文联职务</span>
+                        <span>
+                            <a id="WlPositionAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addWlPosition()">
+                            <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span>
+                </h3>
+				<!-- 不使用grid了,使用ng-repeat 做列表 -->
+	            <table class="table table-bordered table-hover" style="margin-top:10px">
+	                <tr>
+	                    <td style="width:50px">序号</td>
+	                    <td>起始时间</td>
+	                    <td>结束时间</td>
+                        <td>届次</td>
+                        <td>是否现任职务</td>
+                        <td>所属机构</td>
+                        <td>职务名称</td>
+                        <td>备注</td>
+                        <td style="width:50px">操作</td>
+	                </tr>
+	                <tr ng-repeat="position in artistInfo.positions | filter:{dictPostType:'2'}">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ handleDate(position.beginYear,position.beginMonth,position.beginDay)}}</td>
+	                    <td>{{ handleDate(position.endYear,position.endMonth,position.endDay) }}</td>
+	                    <td>{{ position.sectorTimes }}</td>
+	                    <td>{{ position.isPost }}</td>
+	                    <td>{{ position.orgName }}</td>
+	                    <td>{{ position.positionNameShow }}</td>
+	                    <td>{{ position.remarks }}</td>
+	                    <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editWlPosition(position)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delWlPosition(position)"></i>
+	                    </td>
+	                </tr>
+	            </table>
+            </div>
+            
+            <!--协会职务 -->
+            <div class="affix-section">
+                <h3 id="link3">
+                <span>协会职务</span>
+                        <span>
+                             <a id="XhPositionAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addXhPosition()">
+                            <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span>
+                </h3>
+				<!-- 不使用grid了,使用ng-repeat 做列表 -->
+	            <table class="table table-bordered table-hover" style="margin-top:10px">
+	                <tr>
+	                    <td style="width:50px">序号</td>
+	                    <td>起始时间</td>
+	                    <td>结束时间</td>
+                        <td>届次</td>
+                        <td>是否现任职务</td>
+                        <td>所属机构</td>
+                        <td>职务名称</td>
+                        <td>备注</td>
+                        <td style="width:50px">操作</td>
+	                </tr>
+	                <tr ng-repeat="position in artistInfo.positions | filter:{dictPostType:'3'}">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ handleDate(position.beginYear,position.beginMonth,position.beginDay)}}</td>
+	                    <td>{{ handleDate(position.endYear,position.endMonth,position.endDay) }}</td>
+	                    <td>{{ position.sectorTimes }}</td>
+	                    <td>{{ position.isPost }}</td>
+	                    <td>{{ position.orgName }}</td>
+	                    <td>{{ position.positionNameShow }}</td>
+	                    <td>{{ position.remarks }}</td>
+	                    <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editXhPosition(position)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delXhPosition(position)"></i>
+	                    </td>
+	                </tr>
+	            </table>
+            </div>
+            
+			<!--技术职务 -->
+            <div class="affix-section">
+                <h3 id="link4">
+                <span>技术职务</span>
+                        <span>
+                            <a id="JsPositionAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addJsPosition()">
+                            <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span></h3>
+				<!-- 不使用grid了,使用ng-repeat 做列表 -->
+	            <table class="table table-bordered table-hover" style="margin-top:10px">
+	                <tr>
+                        <td style="width:50px">序号</td>
+                        <td>级别</td>
+                        <td>所属机构</td>
+                        <td>职务名称</td>
+                        <td>备注</td>
+                        <td style="width:50px">操作</td>
+	                </tr>
+	                <tr ng-repeat="position in artistInfo.positions | filter:{dictPostType:'4'}">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ position.postLevelName }}</td>
+	                    <td>{{ position.orgCode }}</td>
+	                    <td>{{ position.positionNameShow }}</td>
+	                    <td>{{ position.remarks }}</td>
+	                    <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editJsPosition(position)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delJsPosition(position)"></i>
+	                    </td>
+	                </tr>
+	            </table>
+            </div>
+            
+			<!--社会职务 -->
+            <div class="affix-section">
+                <h3 id="link5">
+                <span>社会职务</span>
+                        <span>
+                            <a id="ShPositionAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addShPosition()">
+                            <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span></h3>
+				<!-- 不使用grid了,使用ng-repeat 做列表 -->
+	            <table class="table table-bordered table-hover" style="margin-top:10px">
+	                <tr>
+	                    <td style="width:50px">序号</td>
+	                    <td>所属机构</td>
+	                    <td>职务名称</td>
+	                    <td>备注</td>
+	                    <td style="width:51px">操作</td>
+	                </tr>
+	                <tr ng-repeat="position in artistInfo.positions | filter:{dictPostType:'5'}">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ position.orgCode }}</td>
+	                    <td>{{ position.positionName }}</td>
+	                    <td>{{ position.remarks }}</td>
+	                    <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editShPosition(position)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delShPosition(position)"></i>
+	                    </td>
+	                </tr>
+	            </table>
+             </div>
+        </div>
+        
+        <div class="tab-pane" id="PersonResume">
+            <div class="affix-section">
+                    <h3 id="link10">
+                        <span>教育经历</span>
+                        <span>
+                            <a id="educationAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addEducation()">
+                            <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span>
+                    </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                    <tr>
+                        <td style="width:50px">序号</td>
+                        <td>起始时间</td>
+                        <td>结束时间</td>
+                        <td>就读国家</td>
+                        <td>就读学校</td>
+                        <td>学习专业</td>
+                        <td>学历</td>
+                        <td>获得学位</td>
+                        <td style="width:65px">操作</td>
+                    </tr>
+                    <tr ng-repeat="education in artistInfo.educations">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ handleDate(education.beginYear,education.beginMonth,education.beginDay)}}</td>
+	                    <td>{{ handleDate(education.endYear,education.endMonth,education.endDay) }}</td>
+	                    <td>{{ education.dictStudyCountryName }}</td>
+	                    <td>{{ education.college}}</td>
+	                    <td>{{ education.dictDiscipline}}</td>
+	                    <td>{{ education.dictEduBgName}}</td>
+	                    <td>{{ education.dictDegreeName}}</td>
+                        <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editEducation(education)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delEducation($index,education)"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="affix-section">
+                <h3 id="link11">
+                	<span>工作经历</span>
+                        <span>
+                            <a id="workAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addWork()">
+                            <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span>
+                </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                    <tr>
+                        <td style="width:50px">序号</td>
+                        <td>起始时间</td>
+                        <td>结束时间</td>
+                        <td>工作单位</td>
+                        <td>职位</td>
+                        <td>工作成绩/成果/业绩</td>
+                        <td style="width:50px">操作</td>
+                    </tr>
+                   <tr ng-repeat="work in artistInfo.works">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ handleDate(work.beginYear,work.beginMonth,work.beginDay)}}</td>
+	                    <td>{{ handleDate(work.endYear,work.endMonth,work.endDay) }}</td>
+	                    <td>{{ work.workUnits}}</td>
+	                    <td>{{ work.position}}</td>
+	                    <td>{{ work.performance}}</td>
+                        <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editWork(work)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delWork($index,work)"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane" id="zpxx">
+            <div class="affix-section">
+                    <h3 id="link10">
+                        <span>作品信息</span>
+                        <span>
+                           <a id="opusArtistRelAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addOpusArtistRel()">
+                            <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span>
+                    </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                    <tr>
+                        <td style="width:50px">序号</td>
+                        <td>作品名</td>
+                        <td>参与时间</td>
+                        <td>职务</td>
+                        <td>备注</td>
+                        <td style="width:65px">操作</td>
+                    </tr>
+                   <tr ng-repeat="opusArtistRel in artistInfo.opusArtistRels">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ opusArtistRel.opusName}}</td>
+	                    <td>{{ opusArtistRel.joinDate }}</td>
+	                    <td>{{ opusArtistRel.dictProfessionName }}</td>
+	                    <td>{{ opusArtistRel.remark }}</td>
+                        <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editOpusArtistRel(opusArtistRel)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delOpusArtistRel($index,opusArtistRel)"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane" id="cyhd">
+            <div class="affix-section">
+                    <h3 id="link10">
+                        <span>参与活动</span>
+                        <span>
+                           <a id="activityArtistRelAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addActivityArtistRel()">
+                           <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span>
+                    </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                    <tr>
+                        <td style="width:50px">序号</td>
+                        <td>活动名称</td>
+                        <td>参与时间</td>
+                        <td>届次</td>
+                        <td>活动简介</td>
+                        <td style="width:65px">操作</td>
+                    </tr>
+                    <tr ng-repeat="activityArtistRel in artistInfo.activityArtistRels">
+ 	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ activityArtistRel.activityName}}</td>
+	                    <td>{{ activityArtistRel.joinDate }}</td>
+	                    <td>{{ activityArtistRel.dictProfession}}</td>
+	                    <td>{{ activityArtistRel.introduction }}</td>
+                        <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editActivityArtistRel(activityArtistRel)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delActivityArtistRel($index,activityArtistRel)"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane" id="hjxx">
+            <div class="affix-section">
+                    <h3 id="link10">
+                        <span>获奖信息</span>
+                        <span>
+                          <a id="awardInfoAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addAward()">
+                           <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span>
+                    </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                    <tr>
+                        <td style="width:50px">序号</td>
+                        <td>奖项名称</td>
+                        <td>奖项/称号</td>
+                        <td>获奖年度</td>
+                        <td>届次</td>
+                        <td>主办单位</td>
+                        <td>地点</td>
+                        <td style="width:300px">备注</td>
+                        <td style="width:65px">操作</td>
+                    </tr>
+                    <tr ng-repeat="award in artistInfo.awards">
+ 	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ award.awardName}}</td>
+	                    <td>{{ award.honoraryTitl }}</td>
+	                    <td>{{ award.awardYear}}</td>
+	                    <td>{{ award.timeNumber }}</td>
+	                    <td>{{ award.sponsor }}</td>
+	                    <td>{{ award.awardAddress}}</td>
+	                    <td>{{ award.remark}}</td>
+                        <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editAward(award)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delAward($index,award)"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane" id="xwzx">
+            <div class="affix-section">
+                    <h3 id="link10">
+                        <span>新闻资讯</span>
+                       <span>
+                           <a id="newsArtistRelAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addNewsArtistRel()">
+                           <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                       </span>
+                    </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                    <tr>
+                        <td style="width:50px">序号</td>
+                        <td>新闻标题</td>
+                        <td>来源</td>
+                        <td>新闻类型</td>
+                        <td style="width:65px">操作</td>
+                    </tr>
+                    <tr ng-repeat="newsArtistRel in artistInfo.newsArtistRels">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{newsArtistRel.newsTitle}}</td>
+	                    <td>{{newsArtistRel.source}}</td>
+	                    <td>{{newsArtistRel.newsTypeName}}</td>
+                        <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editNewsArtistRel(newsArtistRel)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delNewsArtistRel($index,newsArtistRel)"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane" id="yjpl">
+            <div class="affix-section">
+                    <h3 id="link10">
+                        <span>研究评论</span>
+                        <span>
+                           <a id="researchArtistRelAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addResearchArtistRel()">
+                           <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                         </span>
+                    </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                    <tr>
+                        <td style="width:50px">序号</td>
+                        <td>作品名称</td>
+                        <td>创作时间</td>
+                        <td>发表时间</td>
+                        <td>资源类型</td>
+                        <td style="width:300px">作品简介</td>
+                        <td style="width:65px">操作</td>
+                    </tr>
+                    <tr ng-repeat="researchArtistRel in artistInfo.researchArtistRels">
+	                    <td style="text-align:center">{{$index+1}}</td>
+	                    <td>{{ researchArtistRel.opusName}}</td>
+	                    <td>{{ handleDate(researchArtistRel.creationYear,researchArtistRel.creationMonth,researchArtistRel.creationDay)}}</td>
+	                    <td>{{ handleDate(researchArtistRel.issuanceYear,researchArtistRel.issuanceMonth,researchArtistRel.issuanceDay) }}</td>
+	                    <td>需求新增字段</td>
+	                    <td>{{researchArtistRel.opusIntroduction}}</td>
+                        <td style="text-align:center;font-size:14px">
+	                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editResearchArtistRel(researchArtistRel)"></i>
+	                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delResearchArtistRel($index,researchArtistRel)"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane" id="ysxx">
+            <div class="affix-section">
+                    <h3 id="link10">
+                        <span>师承关系</span>
+                        <span>
+                           <a id="teacherStudentAddBtn" style="float:right;font-size:14px" ng-click="artistInfo.addTeacherStudent()">
+                           <i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span>
+                    </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                    <tr>
+                        <td style="width:50px">序号</td>
+                        <td>老师</td>
+                        <td>学生</td>
+                        <td>师承</td>
+                        <td style="width:65px">操作</td>
+                    </tr>
+		            <tr ng-repeat="teacherStudent in artistInfo.teacherStudents">
+			                    <td style="text-align:center">{{$index+1}}</td>
+			                    <td>{{teacherStudent.teacherName}}</td>
+			                    <td>{{teacherStudent.studentName}}</td>
+			                    <td>{{teacherStudent.artTypeNames}}</td>
+		                        <td style="text-align:center;font-size:14px">
+			                        <i class="fa fa-edit" style="cursor:pointer" title="编辑" ng-click="artistInfo.editTeacherStudent(teacherStudent)"></i>
+			                        <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="artistInfo.delTeacherStudent($index,teacherStudent)"></i>
+		                        </td>
+		            </tr>
+                </table>
+            </div>
+            <div class="affix-section">
+                <h3 id="link11">
+                	<span>艺术信息</span>
+                        <span>
+                            <a style="float:right;font-size:14px"><i class="fa fa-plus-circle">&nbsp;</i>添加</a>
+                        </span>
+                </h3>
+                <table class="table table-bordered table-hover" style="margin-top:10px">
+                    <tr>
+                        <td style="width:50px">序号</td>
+                        <td>艺术流派</td>
+                        <td>艺术亚类</td>
+                        <td>特长</td>
+                        <td style="width:50px">操作</td>
+                    </tr>
+                    <tr>
+                        <td style="width:50px">1</td>
+                        <td>真实电影</td>
+                        <td>电影表演</td>
+                        <td>影视表演</td>
+                        <td style="text-align:center;font-size:14px">
+                            <i class="glyphicon glyphicon-pencil" style="cursor:pointer" title="编辑"></i>
+                            <i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="Org.Person.delRole($index)"></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

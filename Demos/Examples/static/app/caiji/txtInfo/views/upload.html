@@ -1,0 +1,56 @@
+<div class="slidebar-detail" id="txtUpload" style="display:none;">
+	<div style="float:left">
+        <div style="padding:10px;font-size:24px"><i class="menu-icon fa fa-picture-o" >&nbsp;</i>文本批量上传</div>
+    </div>
+    <div style="float:right;padding-top:23px;padding-right:15px">
+		<button type="button" class="btn btn-default" ng-click="batchUpload.save()"><i class="menu-icon fa fa-save"></i>&nbsp;保存</button>
+	</div>
+	<div style="float:right;padding-top:23px;padding-right:15px">
+		<button type="button" class="btn btn-default closeBtn" ><i class="menu-icon fa fa-close"></i>&nbsp;关闭</button>
+	</div>
+	
+	<ul class="nav nav-tabs" role="tablist" style="clear:both;">
+    	<li class="active"><a data-target="#txtUpload" role="tab" data-toggle="tab">批量上传</a></li>
+    </ul>
+    
+    <div class="tab-content">
+    	<div class="tab-pane active" id="txtUpload">
+    		<div class="row">
+    			<div class="col-xs-1"></div>
+    			<div class="col-xs-10 form-horizontal">
+    				<div class="row">
+    					<div class="col-xs-12 form-group" >
+    						<div class="col-xs-6">
+    							<label for="typeSelect" class="col-xs-4 control-label" style="padding-left:10px;"><span style="color:red;">*</span>业务类型:</label>
+    							<div class="col-xs-8" style="padding-left:0px;padding-right:0px;">
+    								<input id="typeSelect" name="typeSelect" type="text" class="form-control" cs-input="batchUpload.csInputConfig" ng-model="batchUpload.dicBizType">
+    							</div>
+    						</div>
+    						<div style="float:right;padding-right:15px;"><button id="batchControl" class="btn btn-default"><i class="menu-icon fa fa-upload"></i>&nbsp;开始上传</button></div>
+    						<div id="batchPicker" style="float:right;padding-right:15px;"><button class="btn btn-default"><i class="menu-icon fa fa-list"></i>&nbsp;选择文件</button></div>
+    					</div>
+    					<div class="col-xs-12 form-group" style="padding-top:15px;">
+    						<table class="table table-bordered" id="pictureForUploadList"  text-align="center">
+    								<tr>
+    									<td>文件名称</td>
+    									<td>大小(BYTE)</td>
+    									<td>上传状态</td>
+    									<td>上传进度</td>
+    									<td>操作</td>
+    								</tr>
+    								<tr ng-repeat="txt in batchUpload.data">
+    									<td>{{txt.fileName}}</td>
+    									<td>{{txt.size}}</td>
+    									<td ng-bind="txt.state"></td>
+    									<td><div class=""progress-striped active" ng-class="{progress : txt.pbar}"><div class="progress-bar" role="progressbar" ng-style="{width:txt.width}"></div></div></td>
+    									<td><i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="batchUpload.del($index)"></i></td>
+    								</tr>
+    						</table>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    
+</div>

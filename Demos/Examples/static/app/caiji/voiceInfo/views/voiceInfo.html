@@ -1,0 +1,34 @@
+<div class="col-xs-12" id="queryConditions" style="display:none;">
+	<div class="control-group form-horizontal">
+		<label class="col-xs-1 control-label" for="queryTitle">音频名称:</label>
+		<div class="col-xs-2">
+			<input type="text" class="form-control" id="queryTitle" ng-model="voiceInfo.query.dto.titleName">
+		</div>
+
+		<label class="col-xs-1 control-label" for="querySize">音频大小:</label>
+		<div class="col-xs-2">
+			<input type="text" class="form-control" id="querySize" ng-model="voiceInfo.query.dto.voiceSize">
+		</div>
+
+		<label class="col-xs-1 control-label" for="queryType">业务类型:</label>
+		<div class="col-xs-2">
+			<input id="queryType" name="queryType" type="text" class="form-control" cs-input="voiceInfo.query.csInputConfig" ng-model="voiceInfo.query.dto.dictBizType">
+		</div>
+		<div class="col-xs-3">
+			<div style="float:left">
+				<button class="btn btn-default" ng-click="voiceInfo.query.query()">查询</button>
+				<button class="btn btn-default" ng-click="voiceInfo.query.reset()">重置</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col-xs-12">
+	<div id="voiceInfoList"></div>
+</div>
+<div>
+	<div ng-include src="voiceInfo.template.editVoiceInfo"></div>
+</div>
+<div>
+	<div ng-include src="voiceInfo.template.batchUpload"></div>
+</div>

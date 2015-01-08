@@ -1,0 +1,130 @@
+<div id="opusEditPanel" style="display: none;">
+    <form id="opusFormId">
+    <div style="float:left">
+        <div style="padding:10px;font-size:24px"><i class="fa fa-home"></i>&nbsp;{{opus.entity.opusName}}</div>
+    </div>    
+    <div style="float:right;padding-top:8px;padding-right:33px">
+        <button type="button" class="btn btn-default" style="width:98px;text-align:left" ng-click="opus.saveEntity()">
+            <i class="fa fa-save"></i>&nbsp;保存
+        </button>
+    </div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" style="clear:both">
+        <li class="active"><a data-target="#opusInfo" role="tab" data-toggle="tab">基本信息</a></li>
+        <li><a data-target="#opusArtType" role="tab" data-toggle="tab">作品类型</a></li>
+        <li><a data-target="#opusUser" role="tab" data-toggle="tab">参与人员</a></li>
+        <li><a data-target="#opusUpload" role="tab" data-toggle="tab" ng-click="upload.init()">作品</a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div  class="tab-content">    
+	    <div id="opusInfo" class="tab-pane active">
+	        <div class="affix-section">
+	            <div class="row">
+	                <div class="col-md-12 form-horizontal">
+	                    <div class="form-group">
+	                        <label for="opusName" class="col-sm-2 control-label"><span class="notNull">*</span>作品名称:</label>
+	                        <div class="col-sm-9">
+	                            <input id="opusName" name="opusName" type="text" class="form-control required" ng-model="opus.entity.opusName">
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-12 form-horizontal">
+	                    <div class="form-group">
+	                        <label for="topic" class="col-sm-2 control-label">主题:</label>
+	                        <div class="col-sm-9">
+	                            <input id="topic" name="topic" type="text" class="form-control {chineseLength:50}" ng-model="opus.entity.topic">
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-12 form-horizontal">
+	                    <div class="form-group">
+	                        <label for="masterParticipants" class="col-sm-2 control-label">出处:</label>
+	                        <div class="col-sm-9">
+	                            <input id="masterParticipants" name="masterParticipants"  type="text" class="form-control {chineseLength:200}" ng-model="opus.entity.masterParticipants">
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-12 form-horizontal">
+	                    <div class="form-group">
+	                        <label for="creationDay" class="col-sm-2 control-label">创作时间:</label>
+	                        <div class="col-sm-2">
+	                            <input id="creationYear" name="creationYear"  type="text" class="form-control {digits:true}" maxlength="4" ng-model="opus.entity.creationYear">
+	                        </div>
+	                        <label class="col-sm-pull-0-5 col-sm-1  control-label">年</label>
+	                        <div class="col-sm-2">
+	                            <input id="creationMonth" name="creationMonth"  type="text" class="form-control {digits:true}" maxlength="2" ng-model="opus.entity.creationMonth">
+	                        </div>
+	                        <label class="col-sm-pull-0-5 col-sm-1 control-label">月</label>
+	                        <div class="col-sm-2">
+	                            <input id="creationDay" name="creationDay"  type="text" class="form-control {digits:true}" maxlength="2" ng-model="opus.entity.creationDay">
+	                        </div>  
+	                        <label class="col-sm-pull-0-5 col-sm-1 control-label">日</label>                      
+	                    </div>
+	                </div>                
+	                <div class="col-md-12 form-horizontal">
+	                    <div class="form-group">
+	                        <label for="orderNum" class="col-sm-2 control-label">发布时间:</label>
+	                        <div class="col-sm-2">
+	                            <input id="issuanceYear" name="issuanceYear"  type="text" class="form-control {digits:true}" maxlength="4" ng-model="opus.entity.issuanceYear">
+	                        </div>
+	                        <label class="col-sm-pull-0-5 col-sm-1  control-label">年</label>
+	                        <div class="col-sm-2">
+	                            <input id="issuanceMonth" name="issuanceMonth"  type="text" class="form-control {digits:true}" maxlength="2" ng-model="opus.entity.issuanceMonth">
+	                        </div>
+	                        <label class="col-sm-pull-0-5 col-sm-1 control-label">月</label>
+	                        <div class="col-sm-2">
+	                            <input id="issuanceDay" name="issuanceDay"  type="text" class="form-control {digits:true}" maxlength="2" ng-model="opus.entity.issuanceDay">
+	                        </div>  
+	                        <label class="col-sm-pull-0-5 col-sm-1 control-label">日</label>   
+	                    </div>
+	                </div> 
+	                <div class="col-md-12 form-horizontal">
+	                    <div class="form-group">
+	                        <label for="opusIntroduction" class="col-sm-2 control-label">作品简介:</label>
+	                        <div class="col-sm-9">
+	                            <textarea id="opusIntroduction" name="opusIntroduction" class="form-control" rows="4" ng-model="opus.entity.opusIntroduction"></textarea>
+	                        </div>
+	                    </div>
+	                </div>   
+	            </div>
+	        </div>
+	      </div>  
+        <!-- 艺术类别 -->
+		
+		<!-- 艺术类别 -->
+	    <div id="opusArtType" class="tab-pane" style="margin-top:40px" ng-show="opus.isModify(opus.entity)">
+	    	<div class="col-xs-12">
+		    	<ul id="opusTypeTree" tree-type="opusType" class="ztree"></ul>
+			</div>
+	    </div>
+	   
+		<!-- 参与人员 -->
+	    <div id="opusUser" class="tab-pane" style="margin-top:40px" ng-show="opus.isModify(opus.entity)">	   
+	   	    <div class="col-xs-12">
+	   	    	<button type="button" class="btn btn-default btn-xs" ng-click="opus.artist.add()">添加参与人员</button>
+		    	<table class="table table-bordered table-hover" style="margin-top:10px">
+		    		<tr>
+	                    <td class="text-center">序号</td>
+	                    <td class="text-center">艺术家名称</td>
+	                    <td class="text-center">作品职务</td>
+	                    <td class="text-center">参与时间</td>
+                    	<td class="text-center">操作</td>
+                	</tr>
+                	<tr ng-repeat="oa in opus.artist.list">
+                		<td style="width:50px" ng-bind="$index+1" class="text-center"></td>
+	                    <td ng-bind="oa.artistName" class="text-center"></td>
+	                    <td ><input type="text" class="form-control" cs-input="opus.csInputConfig" ng-model="oa.dictProfession"/></td>
+	                    <td class="text-center"><input type="text" cs-datetime=""  class="form-control" ng-model="oa.joinDate"/><i class="fa fa-calendar cs-calendar"></i></td>
+                    	<td class="text-center" style="width:51px"><i class="glyphicon glyphicon-trash" style="cursor:pointer" title="删除" ng-click="opus.artist.del($index)"></i></td>
+                	</tr>
+		    	</table>
+			</div>
+	    </div>
+	    
+	    <!-- 上传作品 -->
+	    <div id="opusUpload" class="tab-pane"  style="margin-top:40px" ng-show="opus.isModify(opus.entity)">
+	    	<div cs-file-upload="upload"></div>
+	    </div>	    
+    </div>
+    </form>
+</div>

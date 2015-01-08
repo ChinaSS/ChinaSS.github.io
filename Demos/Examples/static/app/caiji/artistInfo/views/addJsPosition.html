@@ -1,0 +1,45 @@
+<!-- 该form用于校验输入 -->
+<form id="JsPositionInfoFormId">
+          <div class="row">
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="orgCode" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>所属机构:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="orgCode" name="orgCode" type="text" class="form-control" ng-model="artistInfo.tempPosition.orgCode">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 form-horizontal">
+                  <div class="form-group">
+                      <label for="jspositionName" class="col-md-4 col-sm-2 control-label"><span style="color:red">*</span>职务名称:</label>
+                      <div class="col-md-8 col-sm-10">
+                          <input id="jspositionName" name="positionName" type="text" class="form-control" cs-input="inputJsPosition.initConfig" ng-model="artistInfo.tempPosition.positionName">
+                      </div>
+                  </div>
+              </div>
+		</div>
+		
+       <div class="row">
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="dictPostLevel" class="col-md-4 col-sm-2 control-label">级别:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="dictPostLevel" name="dictPostLevel" type="text" class="form-control" cs-input="inputJsPositionLevel.initConfig" ng-model="artistInfo.tempPosition.dictPostLevel">
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="row">
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label for="remarks" class="col-md-4 col-sm-2 control-label">备注:</label>
+                    <div class="col-md-8 col-sm-10">
+                        <input id="remarks" name="remarks" type="text" class="form-control" ng-model="artistInfo.tempPosition.remarks">
+                    </div>
+                </div>
+            </div>
+	    </div>
+             
+</form>
+	    

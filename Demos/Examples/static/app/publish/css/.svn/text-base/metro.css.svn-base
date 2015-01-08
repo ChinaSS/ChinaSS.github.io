@@ -1,0 +1,51 @@
+.configPage{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color : #eee;
+    background : transparent url(/wyjg/static/app/publish/images/bkg-festival.jpg) repeat 0 0;
+    display: none;
+}
+
+.configPageMain{
+    text-align: left;
+}
+
+.templateForm{
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 20%;
+}
+
+.templatePanel{
+    height: 100%;
+}
+
+.templateType{
+}
+
+.templateView{
+}
+
+ul.templateList{
+    width: 60%;
+}
+
+.templateList li{
+    color: #fff;
+    font-family: '微软雅黑';
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.templateList li:hover, .badge:hover{
+    transition: 0.8s;
+    opacity: 0.2;
+}
+
+.templateView-container{
+    padding: 10px;
+}

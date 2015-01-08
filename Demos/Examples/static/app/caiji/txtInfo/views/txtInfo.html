@@ -1,0 +1,34 @@
+<div class="col-xs-12" id="queryConditions" style="display:none;">
+	<div class="control-group form-horizontal">
+		<label class="col-xs-1 control-label" for="queryTitle">文本名称:</label>
+		<div class="col-xs-2">
+			<input type="text" class="form-control" id="queryTitle" ng-model="txtInfo.query.dto.titleName">
+		</div>
+
+		<label class="col-xs-1 control-label" for="querySize">文本大小:</label>
+		<div class="col-xs-2">
+			<input type="text" class="form-control" id="querySize" ng-model="txtInfo.query.dto.txtSize">
+		</div>
+
+		<label class="col-xs-1 control-label" for="queryType">业务类型:</label>
+		<div class="col-xs-2">
+			<input id="queryType" name="queryType" type="text" class="form-control" cs-input="txtInfo.query.csInputConfig" ng-model="txtInfo.query.dto.dictBizType">
+		</div>
+		<div class="col-xs-3">
+			<div style="float:left">
+				<button class="btn btn-default" ng-click="txtInfo.query.query()">查询</button>
+				<button class="btn btn-default" ng-click="txtInfo.query.reset()">重置</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col-xs-12">
+	<div id="txtInfoList"></div>
+</div>
+<div>
+	<div ng-include src="txtInfo.template.editTxtInfo"></div>
+</div>
+<div>
+	<div ng-include src="txtInfo.template.batchUpload"></div>
+</div>
