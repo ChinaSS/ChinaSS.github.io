@@ -1,0 +1,20 @@
+/*公共样式--start*/
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.sEditSection1 .imgDetails{
+	display:none;
+}
+.matImgList ul li{
+	list-style: none;
+    float: left;
+    text-align: center;
+}

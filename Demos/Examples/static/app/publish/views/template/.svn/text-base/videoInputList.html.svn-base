@@ -1,0 +1,11 @@
+<form role="form">
+    <div class="form-group">
+        <label>选择视频类型</label>
+       <input type="radio" name="videoType"   checked="checked" value="newsVideo">报道型</input>
+        <input type="radio" name="videoType"  value="opusVideo">作品型</input>
+        <label>请填写视频地址及滚动字幕</label>
+        <input type="text" class="form-control" name="videoLink"" id="setVideoLink" placeholder="视频地址">
+        <input type="text" class="form-control" name="videoWords" id="setVideoWords" placeholder="滚动字幕">
+    
+    </div>
+</form>

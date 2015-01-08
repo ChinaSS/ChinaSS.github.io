@@ -1,0 +1,9 @@
+<div class="matImgs clearfix">
+    <div class="imgs">
+    <ul>
+    {{#imgs}}
+        <li><img id="{{fileId}}"src="http://localhost:8080/wyjg/file/downloadPic?fileId={{fileId}}&bizType=30 "/>{{titleName}}<input type="radio" name="titleName"/></li>
+    {{/imgs}}
+        </ul>
+    </div>
+    </div>

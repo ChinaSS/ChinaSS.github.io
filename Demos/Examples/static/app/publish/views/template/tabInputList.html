@@ -1,0 +1,13 @@
+<form role="form">
+    <div class="form-group">
+       <label>设置内容方式</label>
+       <input type="radio" name="tabType"   checked="checked" value="linkType">链接</input>
+        <input type="radio" name="tabType"  value="manualType">手动输入</input>
+        <label>请填写tab页内容</label><br/>
+      {{#group}}
+        <label>第{{index}}个tab</label>
+        <input type="text" class="form-control" name="tabTitle" id="setTabTitle{{index}}" placeholder="tab标题">
+        <input type="text" class="form-control" name="tabWords" id="setTabWords{{index}}" placeholder="tab页内容">
+      {{/group}}
+    </div>
+</form>

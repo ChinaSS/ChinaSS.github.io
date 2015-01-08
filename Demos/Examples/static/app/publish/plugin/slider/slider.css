@@ -1,0 +1,35 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul li {
+    list-style: none;
+    float: left;
+}
+.rollSpan{
+    margin-right: auto;margin-left: auto;text-align: center;
+}
+.focusDiv{
+"position":"absolute";
+"display":"none";
+"background":"#F60";
+"z-index": "9999";
+"right":"15px";
+"width":"30px";
+"height":"30px";
+"border-radius":"50%"
+}
+.box_nav{
+"position":"absolute";
+"background":"black";
+"filter":"alpha(opacity=60);";
+"opacity":"0.6";
+"z-index": "9999";
+"bottom":0;
+"width":viewWidth;
+"height":"60px"
+}
+.imgSource{
+	display:none;
+}

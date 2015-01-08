@@ -1,0 +1,13 @@
+<div id="singlePic">
+    <div>插件选项:</div>
+    <form role="form" class="sEditSection1">
+        <div class="form-group">
+            <label>设置视频</label>
+            <input type="text" class="form-control" id="videoNo"  value="1">
+            <button type="button" id="setVideoList" class="btn btn-default">确定</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="myplugin" class="btn btn-default">保存</button>
+        </div>
+    </form>
+</div>

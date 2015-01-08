@@ -1,0 +1,101 @@
+/*公共样式--start*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+.imgText *{
+    padding: 0px;
+    margin: 0px;
+}
+.imgText .tbStyle h3,.lrStyle h3{
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom:1px solid #cccaca;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+.imgText .tbStyle ul li,.lrStyle ul li{
+    list-style-type: none;
+    text-align: left;
+    font-size: 14px;
+}
+.imgText .tbStyle ul li a,.lrStyle ul li a{
+    width: 190px;
+    display:inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.imgText ul li a:hover{
+    color: darkred;
+}
+.imgText .tbStyle h3 span,.lrStyle h3 span{
+    border-bottom:3px solid #99b0cc;
+}
+/*公共样式--end*/
+/*左右布局*/
+.imgText .lrStyle{
+.clearfix();
+ clear: both;
+}
+.imgText .lrStyle img{
+    float: left;
+}
+.imgText .lrStyle ul{
+    float: right;
+}
+/*普通样式标题*/
+.imgText .normalHeader ul,.contentStyle ul{
+    margin-left: 16px;
+    /*width: 200px;*/
+}
+.imgText .normalHeader h3,.contentStyle h3{
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom:2px solid #cccaca;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+.imgText .normalHeader ul li,.contentStyle ul li{
+    list-style-type: square;
+    color:#808080 ;
+    padding-left: 0px;
+
+}
+/*有内容的图文混排*/
+.imgText .contentStyle .lrContent{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #999;
+
+}
+.imgText .contentStyle .lrContent img{
+float: left;
+}
+.imgText .contentStyle .lrContent div {
+    float: right;
+    width: 300px;
+    font-size: 13px;
+}
+.imgText .contentStyle .lrContent div  h4{
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.imgText .contentStyle .lrContent div p{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.imgText .contentStyle .lrContent div p a{
+    color: red;
+    font-weight: bold;
+}

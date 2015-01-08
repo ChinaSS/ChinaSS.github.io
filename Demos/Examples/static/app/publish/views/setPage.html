@@ -1,0 +1,37 @@
+<div id="setPageHtml">
+    <form role="form">
+        <div class="form-group">
+            <label for="rowsNo">请输入行数</label>
+            <div class="button-group">
+                <input type="text" class="form-control" id="rowsNo" placeholder="请输入行数">
+                <button type="button" id="setRowsNos" class="btn btn-default">保存</button>
+            </div>
+            <div class="rowsInputList"></div>
+        </div>
+        <div class="form-group">
+            <label for="columnsNo">请输入列数</label>
+            <div class="button-group">
+            <input type="text" class="form-control" id="columnsNo" placeholder="请输入列数">
+            <button type="button" id="setColumnNos" class="btn btn-default">保存</button>
+            </div>
+            <div class="columnsInputList"></div>
+        </div>
+        <div class="form-group">
+            <label for="pluginType">请选择填充模板</label>
+            <select id="pluginType" class="form-control">
+                <option value="0">请选择...</option>
+                <option value="1">单张广告图片</option>
+                <option value="2">滚动横幅</option>
+                <option value="3">图文混排</option>
+                <option value="4">新闻列表</option>
+                <option value="5">导航菜单</option>
+                <option value="6">footer</option>
+                <option value="7">视频</option>
+                <option value="8">tab页</option>
+            </select>
+            <button type="button" id="setContent" class="btn btn-default">保存</button>
+        </div>
+        <div class="form-group" id="contentAttrs">
+        </div>
+    </form>
+</div>

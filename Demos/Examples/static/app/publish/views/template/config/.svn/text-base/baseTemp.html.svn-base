@@ -1,0 +1,87 @@
+<div class="row templatePanel">
+    <div class="col-md-1">
+    </div>
+	<div class="col-md-2 templateType">
+		<ul class="list-group templateList" >
+		  <li class="list-group-item">
+		    <span class="badge">124</span>
+		    戏剧
+		  </li>
+          <li class="list-group-item">
+            <span class="badge">14</span>
+            电影
+          </li>
+          <li class="list-group-item">
+            <span class="badge">5</span>
+            音乐
+          </li>
+          <li class="list-group-item">
+            <span class="badge">4</span>
+            美术
+          </li>
+          <li class="list-group-item">
+            <span class="badge">134</span>
+            曲艺
+          </li>
+          <li class="list-group-item">
+            <span class="badge">74</span>
+            舞蹈
+          </li>
+                  <li class="list-group-item">
+            <span class="badge">15</span>
+            摄影
+          </li>
+          <li class="list-group-item">
+            <span class="badge">21</span>
+            书法
+          </li>
+                  <li class="list-group-item">
+            <span class="badge">25</span>
+            杂技
+          </li>
+          <li class="list-group-item">
+            <span class="badge">78</span>
+            影视
+          </li>
+		</ul>
+	</div>
+	<div class="col-md-6 templateView">
+		<div class="row">
+		  <div class="col-xs-6 col-md-4 templateView-container" >
+		    <a href="#" class="thumbnail">
+		      <!-- <img id="templateEmpty" src="/wyjg/file/download?fileId=1&bizType=50"> -->
+		      <img id="templateOne" src="/wyjg/static/app/publish/images/templatePreview/new.jpg">
+		    </a>
+		  </div>
+		  <div class="col-xs-6 col-md-4 templateView-container" >
+            <a href="#" class="thumbnail">
+              <img id="templateOne" src="/wyjg/static/app/publish/images/templatePreview/2.jpg">
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-4 templateView-container" >
+            <a href="#" class="thumbnail">
+              <img src="/wyjg/static/app/publish/images/templatePreview/3.jpg">
+            </a>
+          </div>
+		</div>
+        <div class="row">
+          <div class="col-xs-6 col-md-4 templateView-container" >
+            <a href="#" class="thumbnail">
+              <img src="/wyjg/static/app/publish/images/templatePreview/4.jpg">
+            </a>
+          </div>
+          <div class="col-xs-6 col-md-4 templateView-container" >
+            <a href="#" class="thumbnail">
+              <img src="/wyjg/static/app/publish/images/templatePreview/5.jpg">
+            </a>
+          </div>
+                  <div class="col-xs-6 col-md-4 templateView-container" >
+            <a href="#" class="thumbnail">
+              <img src="/wyjg/static/app/publish/images/templatePreview/6.jpg">
+            </a>
+          </div>
+        </div>
+	</div>
+	<div class="col-md-2">
+    </div>
+</div>

@@ -1,0 +1,48 @@
+/*公共样式--start*/
+*{
+    padding:0;
+    margin:0;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.modal-header{
+    padding: 6px 20px;
+}
+/*内容样式*/
+.matImgs .option input{
+    width: 100px;
+    border-radius: 2px;
+    font-weight:200;
+}
+.matImgs .option  #imgType{
+	width: 200px;
+}
+.matImgs .option button{
+padding: 0px;
+height: 26px;
+    width: 60px;
+}
+.matImgs .imgs  ul li{
+    width: 150px;
+    height: 150px;
+    list-style: none;
+    float: left;
+    text-align: center;
+    margin-left: 10px;
+}
+.matImgs .imgs ul li img{
+    width: 95%;
+    height: 120px;
+}
+.matImgs .imgs ul li img:hover{
+    width:100%;
+    height: 130px;
+}

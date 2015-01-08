@@ -1,0 +1,133 @@
+/*公共样式--start*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.imgText * {
+    padding: 0px;
+    margin: 0px;
+}
+
+.imgText ul{
+    padding-left: 17px;
+}
+
+.imgText ul li a:hover {
+    color: darkred;
+}
+
+/*公共样式--end*/
+/*标题新首页样式--start*/
+/*tb:topBottom,lr:leftToRight*/
+.imgText .tbStyle h3, .lrStyle h3 {
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #cccaca;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.imgText .tbStyle ul li, .lrStyle ul li {
+    list-style-type: square;
+    text-align: left;
+    font-size: 14px;
+}
+
+.imgText .tbStyle ul li a, .lrStyle ul li a {
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.imgText .tbStyle h3 span, .lrStyle h3 span {
+    border-bottom: 3px solid #99b0cc;
+}
+
+/*左右布局*/
+.imgText .lrStyle img{
+    float: left;
+    width: 30%;
+}
+.imgText .lrStyle ul{
+    float: right;
+    width: 70%;
+}
+/*标题新首页样式--end*/
+/*标题普通样式*/
+.imgText .normalHeader ul, .contentStyle ul {
+    margin-left: 16px;
+    /*width: 200px;*/
+}
+
+.imgText .normalHeader h3, .contentStyle h3 {
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 2px solid #cccaca;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+.imgText .normalHeader ul li, .contentStyle ul li {
+    list-style-type: square;
+    color: #808080;
+    padding-left: 0px;
+}
+
+/*有内容的图文混排*/
+.contentStyle {
+    height: 230px;/*图文混排处整体div高度*/
+}
+.imgText .contentStyle .lrContent {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #999;
+    height: 45%;
+}
+
+.imgText .contentStyle .lrContent img {
+    width: 28%;
+    float: left;
+    height: 100%;
+}
+
+.imgText .contentStyle .lrContent div {
+    float: right;
+    width: 70%;
+    font-size: 13px;
+    height: 100%;
+   }
+
+.imgText .contentStyle .lrContent div h4 {
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    height: 20%;
+}
+
+.imgText .contentStyle .lrContent div p {
+    height: 60%;
+    overflow: hidden;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.imgText .contentStyle .lrContent div span a{
+    height: 15%
+    font-size: 13px;
+    color: red;
+    font-weight: bold;
+    z-index: 99999;
+    float: right;
+
+}

@@ -1,0 +1,35 @@
+/*公共样式--start*/
+.navMenuContainer{
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
+}
+
+.navMenu{
+    font-family: '微软雅黑' ;
+    font-size : 14px;  
+}
+
+.navMenu ul li{
+    list-style: none;
+    float: left;
+    border-right : 1px solid #CFC5C5;
+    padding : 1px 4px;
+}
+
+.navMenu ul li:last-child{
+    border-right : 0px;
+}
+
+.navMenu ul li:hover{
+   border-bottom:  3px solid #71736f;
+}
+
+.navMenu ul li a,.footer ul li a{
+	color: #71736f;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.navMenu ul li a:link{
+    -webkit-font-smoothing: antialiased;
+}

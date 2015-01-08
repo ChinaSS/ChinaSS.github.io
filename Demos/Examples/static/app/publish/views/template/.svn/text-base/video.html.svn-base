@@ -1,0 +1,47 @@
+<div class="viewText">
+                <!--新闻视频-->
+                <div class="newsViews">
+                <ul>
+                 {{#videos}}
+                <li>
+                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+                            codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0">
+                        <param name="movie"
+                               value="{{link}}"/>
+                        <param name="quality" value="high">
+                        <embed src="{{link}}"
+                               type="application/x-shockwave-flash">
+                    </object>
+                    <div class="slid">
+                        <marquee>   {{des}}</marquee>
+                    </div>
+                    <p>新华社报道</p>
+                    </li>
+                            {{/videos}}
+                    </ul>
+                </div>
+
+                <!--作品视频-->
+                <div class="opusView">
+                 <ul>
+                 {{#videos}}
+                <li>
+                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+                            codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0">
+                        <param name="movie"
+                               value="{{link}}"/>
+                        <param name="quality" value="high">
+                        <embed src="{{link}}"
+                               type="application/x-shockwave-flash">
+                    </object>
+                    <p>老拜年/赵本山作品</p>
+
+                    <p class="summary">
+                      {{des}}
+                    </p>
+                    </li>
+                    {{/videos}}
+                    </ul>
+                </div>
+        </div>
+          

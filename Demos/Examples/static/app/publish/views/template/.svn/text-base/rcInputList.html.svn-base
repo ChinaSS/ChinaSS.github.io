@@ -1,0 +1,10 @@
+<form role="form">
+    <div class="form-group">
+        <label>请填写每一行占百分比。总和为100</label>
+        {{#group}}
+        <label for="set{{#hasRow}}Row{{/hasRow}}{{#hasColumn}}Column{{/hasColumn}}{{index}}">第{{index}}行</label>
+        <input type="text" class="form-control" name="{{#hasRow}}row{{/hasRow}}{{#hasColumn}}column{{/hasColumn}}List" id="set{{#hasRow}}Row{{/hasRow}}{{#hasColumn}}Column{{/hasColumn}}{{index}}" placeholder="请输入百分比">
+        {{/group}}
+        <button type="button" id="set{{#hasRow}}Row{{/hasRow}}{{#hasColumn}}Column{{/hasColumn}}s" class="btn btn-default">保存</button>
+        </div>
+</form>

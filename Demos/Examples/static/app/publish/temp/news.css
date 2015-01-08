@@ -1,0 +1,67 @@
+
+/*公共样式-start*/
+.newsMainDotted,.newsSquareDashed,.newsNoneStyle,.newsStartStyle {
+    width: 600px;
+    height:auto;
+    margin:0 auto;
+    padding:5px 0;
+    .clearfix();
+}
+ ul li{
+    line-height:28px;
+    text-align: left;
+     color:#000000 ;
+}
+.newsMainDotted ul li a,.newsSquareDashed ul li a,.newsNoneStyle  ul li a,.newsStartStyle ul li a{
+    display:inline-block;
+    width: 400px;
+    text-decoration: none;
+    color:#0044cc;
+    text-align: left;
+    vertical-align: middle;
+    padding: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.newsMainDotted ul li span,.newsSquareDashed ul li span,.newsNoneStyle ul li span{
+    float:right;
+    text-align: right;
+    color: #999;
+}
+ul li:hover,ul li a:hover,.newsStartStyle span:hover{
+    color: red;
+    font-weight: bolder;
+}
+/*公共样式-end*/
+
+/**
+没有下划线和序号
+*/
+.newsMainDotted ul li{
+    list-style-type:disc;
+    border-bottom:dashed 1px #CCC;
+}
+/**
+下划线是虚线
+*/
+ .newsSquareDashed ul li{
+    list-style-type: square;
+    border-bottom:dashed 1px #CCC;
+}
+/**
+去除下划线、序号及新闻字体颜色
+*/
+.newsNoneStyle ul li,.newsStartStyle ul li{
+    list-style: none;
+    /*border-bottom:dashed 1px #CCC;*/
+  }
+.newsNoneStyle ul li a{
+    color: #000000;
+}
+/**
+五角星序号
+*/
+.newsStartStyle span{
+ color:#2c7659;
+}

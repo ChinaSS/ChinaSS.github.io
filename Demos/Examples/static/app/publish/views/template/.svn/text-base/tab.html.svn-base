@@ -1,0 +1,34 @@
+
+        <div class="tab ">
+
+            <!--模板引入方式-->
+                <div class="tabIndex clearfix">
+                    <ul class="clearfix">
+                     {{#tabs}}
+                          <li onmouseover="tabContent(this,'{{des}}')">{{title}}</li>
+                     {{/tabs}}
+                    </ul>
+                </div>
+                <div class="tabContent">
+          
+                    <iframe id="content" src="#"></iframe>
+                  
+                </div>
+            <!--普通方式-->
+                <div id="tabPlain" class="tabPlain clearfix">
+                    <ul class="clearfix">
+                    {{#tabs}}
+                      <li><a href="#tabs-{{index}}">{{title}}</a></li>
+                    {{/tabs}}
+                    </ul>
+                    <div>
+                     {{#tabs}}
+                     <div id="tabs-{{index}}">
+                            {{des}}
+                        </div>
+                      {{/tabs}}
+                   
+                    </div>
+                </div>
+        </div>
+    

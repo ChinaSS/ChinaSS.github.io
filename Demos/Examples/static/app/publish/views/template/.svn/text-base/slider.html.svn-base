@@ -1,0 +1,10 @@
+<div >
+        <!--上下方式：标题、图片、新闻列表-->
+        <div id="top" class="slider" style="width: {{width}}px">
+        <ul>
+        {{#imgs}}
+            <li><a target="_blank" href="{{link}}"><img src="{{url}}" alt="图片" ></a></li>
+        {{/imgs}}
+        </ul>
+		</div>
+</div>

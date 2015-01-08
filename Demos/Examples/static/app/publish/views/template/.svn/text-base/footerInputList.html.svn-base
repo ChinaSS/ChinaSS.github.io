@@ -1,0 +1,10 @@
+<form role="form">
+    <div class="form-group">
+        <label>请填写每一行的新闻标题及链接</label>
+        {{#group}}
+        <label>第{{index}}个菜单</label>
+        <input type="text" class="form-control" name="title" id="setFriendLinkTitle{{index}}" placeholder="第{{index}}个友情链接菜单标题">
+        <input type="text" class="form-control" name="link" id="setFriendLinkLink{{index}}" placeholder="第{{index}}个友情链接菜单链接">
+        {{/group}}
+    </div>
+</form>

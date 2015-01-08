@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图文混排</title>
+    <link rel="stylesheet" href="../plugin/imgText/imgText.css">
+    <link rel="stylesheet" href="/topicTemplate/lib/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="imgText">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="tbStyle">
+                    <!--上下方式：标题、图片、新闻列表-->
+                    <h3><span>会议活动</span></h3>
+
+                    <div>
+                        <img src="images/1.jpg" alt="图片"  height="100px"/>
+                    </div>
+                    <ul>
+                        <li><a href="#">学习贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观颐和园</a></li>
+                        <li><a href="#">中国文联通知学习宣传贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观首都博物馆</a></li>
+                        <li><a href="#">第四届中国校园戏剧节在沪落幕</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--上下方式：标题、图片、新闻列表-->
+            <div class="col-md-2">
+                <div class="tbStyle">
+                    <div>
+                        <img src="images/1.jpg" alt="图片"height="100px"/>
+                    </div>
+                    <ul>
+                        <li><a href="#">学习贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观颐和园</a></li>
+                        <li><a href="#">中国文联通知学习宣传贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观首都博物馆</a></li>
+                        <li><a href="#">第四届中国校园戏剧节在沪落幕</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="tbStyle">
+                    <!--上下方式：标题、图片、新闻列表-->
+                    <h3><span>会议活动</span></h3>
+                    <ul>
+                        <li><a href="#">学习贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观颐和园</a></li>
+                        <li><a href="#">中国文联通知学习宣传贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观首都博物馆</a></li>
+                        <li><a href="#">第四届中国校园戏剧节在沪落幕</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="lrStyle clearfix">
+                    <h3><span>会议活动</span></h3>
+                    <img src="images/1.jpg" alt="图片" height="100px"/>
+                    <ul>
+                        <li><a href="#">学习贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观颐和园</a></li>
+                        <li><a href="#">中国文联通知学习宣传贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要人参观首都博物馆</a></li>
+                        <li><a href="#">第四届中国校园戏剧节在沪落幕</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="lrStyle clearfix">
+                    <img src="images/1.jpg" alt="图片" height="100px"/>
+                    <ul>
+                        <li><a href="#">学习贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观颐和园</a></li>
+                        <li><a href="#">中国文联通知学习宣传贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观首都博物馆</a></li>
+                        <li><a href="#">第四届中国校园戏剧节在沪落幕</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <!--normalHeader_content-->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="normalHeader">
+                    <h3><span>会议活动</span></h3>
+                    <img src="images/1.jpg" alt="图片" height="100px"/>
+                    <ul>
+                        <li><a href="#">学习贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观颐和园</a></li>
+                        <li><a href="#">中国文联通知学习宣传贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观首都博物馆</a></li>
+                        <li><a href="#">第四届中国校园戏剧节在沪落幕</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="normalHeader">
+                    <h3><span>会议活动</span></h3>
+                    <ul>
+                        <li><a href="#">学习贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观颐和园</a></li>
+                        <li><a href="#">中国文联通知学习宣传贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观首都博物馆</a></li>
+                        <li><a href="#">第四届中国校园戏剧节在沪落幕</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="normalHeader">
+                    <h3><span>会议活动</span></h3>
+                    <ul>
+                        <li><a href="#">学习贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观颐和园</a></li>
+                        <li><a href="#">中国文联通知学习宣传贯彻习近平重要讲话精神</a></li>
+                        <li><a href="#">彭丽媛邀请部分外方政要夫人参观首都博物馆</a></li>
+                        <li><a href="#">第四届中国校园戏剧节在沪落幕</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <!--有内容的图文混排列表-->
+            <div class="col-md-4">
+                <div class="contentStyle">
+                    <h3><span>会议活动</span></h3>
+
+                    <div class="lrContent clearfix content">
+                        <img src="images/1.jpg" alt="图片"  height="100px"/>
+
+                        <div>
+                            <h4>李坚：学习艺术要保持纯净的心态</h4>
+                            <p> 艺术是一种直觉，学习艺术应该用纯净的心境去感受它原本的魅力。艺术是一种直觉，用纯净的心境去感受它原本的魅力。艺术是一种直觉，用纯净的心境去感受它原本的魅力.</p>
+                            <span><a href="#" class="clearfix">详细>></a></span>
+                        </div>
+                    </div>
+                    <!--<div style="clear: both">-->
+                    <div>
+                        <ul>
+                            <li><a href="#">学习贯彻习近平重要讲话精神</a></li>
+                            <li><a href="#">彭丽媛邀请部分外方政要夫人参观颐和园</a></li>
+                            <li><a href="#">中国文联通知学习宣传贯彻习近平重要讲话精神</a></li>
+                            <li><a href="#">彭丽媛邀请部分外方政要夫人参观首都博物馆</a></li>
+                            <li><a href="#">第四届中国校园戏剧节在沪落幕</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--normalHeader_content--end-->
+    </div>
+</div>
+</body>
+</html>

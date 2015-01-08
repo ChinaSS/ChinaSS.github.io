@@ -1,0 +1,10 @@
+<div class="navMenuContainer">
+        <!--上下方式：标题、图片、新闻列表-->
+        <div class="navMenu">
+        <ul>
+        {{#menus}}
+            <li><a target="_blank" href="{{link}}">{{title}}</a></li>
+        {{/menus}}
+        </ul>
+        </div>
+</div>

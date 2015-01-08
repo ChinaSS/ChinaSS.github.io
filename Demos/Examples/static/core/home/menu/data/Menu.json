@@ -1,0 +1,45 @@
+[
+    {
+        "name":"开发样例",
+        "iCoin":"fa-bar-chart",
+        "sidebars":[
+            {"name":"Util自有组件",
+             "sidebars":[
+                 {"name":"dialog.js","href":"#util"},
+                 {"name":"util.js","href":"#util"},
+                 {"name":"grid.js","href":"#util"},
+                 {"name":"fileUpload.js","href":"#util"},
+                 {"name":"singleFileUpload.js","href":"#util"},
+                 {"name":"typeahead.js","href":"#util"},
+                 {"name":"treeSearch.js","href":"#util"},
+                 {"name":"inputSelect.js","href":"#util"},
+                 {"name":"个人头像裁剪","href":"#util"}
+             ]
+            },
+            {"name":"组件组合样例",
+             "sidebars":[
+                 {"name":"treeDialog","href":"#log"},
+                 {"name":"treeAndGridDialog","href":"#logFile"}
+             ]
+            },
+            {"name":"第三方组件",
+             "sidebars":[
+                 {"name":"树","href":"#log"},
+                 {"name":"日期","href":"#logFile"},
+                 {"name":"图表","href":"#logFile"},
+                 {"name":"图标","href":"#logFile"},
+                 {"name":"滚动条美化","href":"#logFile"},
+                 {"name":"附件上传","href":"#logFile"}
+             ]
+            }
+        ]
+    },
+    {
+        "name":"其它样例",
+        "iCoin":"fa fa-bars",
+        "sidebars":[
+            {"name":"表单模板"},
+            {"name":"侧边栏模板"}
+        ]
+    }
+]

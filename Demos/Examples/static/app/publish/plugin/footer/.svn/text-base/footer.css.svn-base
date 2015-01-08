@@ -1,0 +1,74 @@
+/*公共样式--start*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+/*firendLink*/
+.footer .firendLink{
+    width:100%;
+    margin: 0 auto;
+    font:16px/34px '微软雅黑', tahoma;
+    /* #友情链接颜色：2370CC，备案颜色24599F;*/
+    background-color: #3270CC;
+    padding : 0px 80px;
+}
+/*.footer ul{*/
+    /*width: 100%;*/
+    /*vertical-align: middle;*/
+/*}*/
+.footer .firendLink  ul li{
+    list-style: none;
+    float: left;
+    text-align: center;
+    margin-right:5px;
+    /*background: url(./imgs/leftBorder.png) no-repeat right 10px;*/
+    border-right:dotted 1px #ffffff;
+}
+.footer .firendLink ul li:last-child{
+    border-right:0;
+}
+.footer .firendLink ul li a{
+    margin: 0 auto;
+    text-decoration: none;
+    color: #ffffff;
+}
+/*copyRight*/
+.footer .copyRight{
+    width:100%;
+    margin: 0 auto;
+    font:16px/34px '微软雅黑', tahoma;
+    /* #友情链接颜色：2370CC，备案颜色24599F;*/
+    background-color: #24599F;
+}
+.footer .copyRight .leftCopyRight{
+    width: 25%;
+    float: left;
+    text-align: right;
+}
+.footer .copyRight  .rightCopyRight{
+    width: 75%;
+    float: right;
+}
+.footer .copyRight .leftCopyRight img{
+    margin:20px ;
+}
+.footer .copyRight  .rightCopyRight ul{
+    margin:20px;
+}
+.footer .copyRight  .rightCopyRight ul li{
+    list-style: none;
+}
+.footer .copyRight  .rightCopyRight ul li{
+    font:16px/24px '宋体', tahoma;
+    color: #ffffff;
+}

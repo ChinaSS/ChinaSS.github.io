@@ -1,0 +1,10 @@
+<!-- 角色主页面 -->
+<div class="col-xs-12">
+    <div id="templateListId">
+
+    </div>
+</div>
+<!-- 编辑模板-->
+<div>
+    <div ng-include src="template.template.editTemplate"></div>
+</div>

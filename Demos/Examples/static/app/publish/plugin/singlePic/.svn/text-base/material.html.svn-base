@@ -1,0 +1,7 @@
+<div class="matImgList clearfix">
+<ul>
+ {{#imgs}}
+      <li><img src="{{url}}"><br/>{{name}}</li>
+  {{/imgs}}
+</ul>
+</div>

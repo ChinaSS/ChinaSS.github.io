@@ -1,0 +1,58 @@
+<!DOCTYPE >
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>新闻列表</title>
+<link rel="stylesheet" href="clearFloat.css">
+<link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="/MXDemo/lib/modules/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="newsMainDotted">
+    <ul>
+        <li><a href="#">新闻标题新闻标题新闻标题新题新闻标题新闻标新闻标新闻标题闻标题新闻标题新闻标题新题新闻标题新</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题闻闻标题新闻标新标新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题新闻闻标题新闻标新新闻新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题题新闻标标题新闻标新新闻标题新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题新闻标题新标题新闻标新新闻题新闻标题</a><span>2010-04-03</span></li>
+    </ul>
+</div>
+
+<div class="newsSquareDashed">
+    <ul>
+        <li><a href="#">新闻标题新闻标题新闻标题新题新闻标题新闻标新闻标新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题闻闻标题新闻标新标新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题新闻闻标题新闻标新新闻新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题题新闻标标题新闻标新新闻标题新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题新闻标题新标题新闻标新新闻题新闻标题</a><span>2010-04-03</span></li>
+    </ul>
+</div>
+<div class="newsNoneStyle">
+    <ul>
+        <li><a href="#">新闻标题新闻标题新闻标题新题新闻标题新闻标新闻标新闻标题新闻标题新闻标题新闻标题新题新闻标题新闻标新闻标新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题闻闻标题新闻标新标新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题新闻闻标题新闻标新新闻新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题题新闻标标题新闻标新新闻标题新闻标题</a><span>2010-04-03</span></li>
+        <li><a href="#">新闻标题新闻标题新闻标题新标题新闻标新新闻题新闻标题</a><span>2010-04-03</span></li>
+    </ul>
+</div>
+<div class="newsNoneStyle">
+    <ul>
+        <li><a href="#">新闻标题新闻标题新闻标题新题新闻标题新闻标新闻标新闻标题</a></li>
+        <li><a href="#">新闻标题新闻标题闻闻标题新闻标新标新闻标题</a></li>
+        <li><a href="#">新闻标题新闻标题新闻闻标题新闻标新新闻新闻标题</a></li>
+        <li><a href="#">新闻标题新闻标题题新闻标标题新闻标新新闻标题新闻标题</a></li>
+        <li><a href="#">新闻标题新闻标题新闻标题新标题新闻标新新闻题新闻标题</a></li>
+    </ul>
+</div>
+<div class="newsStartStyle">
+    <ul>
+        <li><span class="glyphicon glyphicon-star"></span><a href="#">新闻标题新闻标题新闻标题新题新闻标题新闻标新闻标新闻标题</a></li>
+        <li><span class="glyphicon glyphicon-star"></span><a href="#">新闻标题新闻标题闻闻标题新闻标新标新闻标题</a></li>
+        <li><span class="glyphicon glyphicon-star"></span><a href="#">新闻标题新闻标题新闻闻标题新闻标新新闻新闻标题</a></li>
+        <li><span class="glyphicon glyphicon-star"></span><a href="#">新闻标题新闻标题题新闻标标题新闻标新新闻标题新闻标题</a></li>
+        <li><span class="glyphicon glyphicon-star"></span><a href="#">新闻标题新闻标题新闻标题新标题新闻标新新闻题新闻标题</a></li>
+    </ul>
+</div>
+</body>
+</html> 

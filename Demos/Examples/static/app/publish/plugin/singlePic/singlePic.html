@@ -1,0 +1,27 @@
+<!-- 单张图片 -->
+<div id="singlePic">
+    <div>插件选项:</div>
+    <form role="form" class="sEditSection1">
+        <div class="form-group">
+        <label for="spWidth">图片宽度</label>
+        <input type="text" id="spWidth" class="form-control" placeholder="请输入图片宽度"></input>
+        <label for="spHeight">图片高度</label>
+        <input type="text" id="spHeight" class="form-control" placeholder="请输入图片高度"></input>
+        <label for="spImgUrl">图片来源</label>
+        <input type="radio" name="imgUrl"  checked="checked"  value="netImg">网络图片</input>
+         <input type="radio" name="imgUrl"   value="matImg">素材库</input>
+        <div class="netImg">
+        <label for="spImgUrl">图片地址</label>
+        <input type="text" id="spImgUrl" class="form-control" placeholder="请输入图片地址" ></input>
+        </div>
+        <label for="spImgUrl">图片外链</label>
+        <input type="text" id="spLink" class="form-control" placeholder="请输入图片外链"></input>
+        <div class="imgDetails">
+        <label for="spLink">已选图片详情</label>
+        <img src="" alt="单张图片"/>
+        <input type="text" id="imgName" class="form-control"  readOnly="true"></input>
+        </div>
+        </div>
+        <button type="button" id="myplugin" class="btn btn-default">保存</button>
+    </form>
+</div>

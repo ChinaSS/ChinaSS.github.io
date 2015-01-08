@@ -1,0 +1,10 @@
+<form role="form">
+    <div class="form-group">
+        <label>请填写每张图片路径及链接</label>
+        {{#group}}
+        <label>第{{index}}张图片</label>
+        <input type="text" class="form-control" name="imgPath" id="setImgPath{{index}}" placeholder="第{{index}}张图片路径">
+        <input type="text" class="form-control" name="imgLink" id="setImgLink{{index}}" placeholder="第{{index}}张图片链接">
+        {{/group}}
+    </div>
+</form>

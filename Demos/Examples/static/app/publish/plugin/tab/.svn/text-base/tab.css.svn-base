@@ -1,0 +1,37 @@
+/*公共样式--start*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+/*模板方式样式和部分普通方式样式*/
+.tab .tabIndex ul li,.tab .tabPlain ul li {
+    list-style: none;
+    float: left;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding: 5px 10px;
+    font-family:"宋体";
+    cursor:pointer;
+    margin-bottom: 5px;
+}
+
+ .tab .tabContent iframe{
+    position: absolute;
+    border: 0;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+/*普通方式独立样式*/
+.tab .tabPlain ul li a{
+    text-decoration: none;
+}
+.tab .tabPlain div #tabs-2,.tab .tabPlain div #tabs-3{
+    display: none;
+}
